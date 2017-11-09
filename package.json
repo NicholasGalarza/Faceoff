@@ -1,0 +1,32 @@
+{
+  "name": "vr-game",
+  "version": "1.0.0",
+  "description": "A VR Game that will allow a user to destory objects by giving an appropriate facial expression",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack && node server/index.js",
+    "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline"
+  },
+  "keywords": [
+    "a-frame",
+    "three.js",
+    "clmtracker",
+    "webpack",
+    "react"
+  ],
+  "author": "Nicholas Galarza",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^5.1.1",
+    "semistandard": "^11.0.0",
+    "snazzy": "^7.0.0",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "aframe": "^0.7.1",
+    "express": "^4.16.2",
+    "path": "^0.12.7", 
+    "webpack": "^3.8.1"
+  }
+}
