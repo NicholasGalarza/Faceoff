@@ -195,6 +195,9 @@
             function _resetWatcher(event) {
                eToggle = 0
                stopVideo()
+               var cp = ctrack.getCurrentParameters();
+               var finalVal = ec.meanPredict(cp)
+               console.log('DESIRED VALUE', finalVal)
             }
 
             var charElement = document.getElementById("clm-emotion");
@@ -249,6 +252,7 @@
          var ec = new emotionClassifier();
          ec.init(emotionModel);
          var emotionData = ec.getBlank();
+        
 
       </script>
    </div>
