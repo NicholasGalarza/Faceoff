@@ -16,6 +16,6 @@ app.use('/', (req, res, send) => {
   res.sendFile(path.resolve(__dirname, '..', 'index.html'))
 })
 
-app.listen(port, function () {
- console.log('Virtual/Augmented Reality Enabled On Port' + port);
+app.listen(port, () => {
+ console.log(`Virtual Reality Enabled On Port ${port}`);
 });

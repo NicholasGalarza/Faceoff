@@ -9649,8 +9649,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Index = function (_React$Component) {
-   _inherits(Index, _React$Component);
+var Index = function (_Component) {
+   _inherits(Index, _Component);
 
    function Index() {
       _classCallCheck(this, Index);
@@ -9659,6 +9659,25 @@ var Index = function (_React$Component) {
    }
 
    _createClass(Index, [{
+      key: 'generateLinearRow',
+      value: function generateLinearRow(startingPoint, limit) {
+         var row = [],
+             right = 0;
+         var color = ["red", "green", "black", "blue", "yellow"];
+         for (var i = 0; i <= limit; i++) {
+            row.push(_react2.default.createElement(
+               'a-box',
+               { key: i, color: color[i % 5], position: startingPoint + ' 2 -5', rotation: '0 45 45', scale: '2 2 2', 'scale-on-mouseenter': 'to: 2.2 2.2 2.2' },
+               _react2.default.createElement('a-animation', { width: '4', height: '10', attribute: 'position', to: startingPoint + ' 2.2 -5', direction: 'alternate', dur: '2000', repeat: 'indefinite' }),
+               _react2.default.createElement('a-animation', { attribute: 'scale', begin: 'mouseenter', dur: '300', to: '2.3 2.3 2.3' }),
+               _react2.default.createElement('a-animation', { attribute: 'scale', begin: 'mouseleave', dur: '300', to: '2 2 2' }),
+               _react2.default.createElement('a-animation', { attribute: 'rotation', begin: 'click', dur: '2000', to: '360 405 45' })
+            ));
+            startingPoint += i + 8;
+         }
+         return row;
+      }
+   }, {
       key: 'render',
       value: function render() {
          return _react2.default.createElement(
@@ -9673,14 +9692,7 @@ var Index = function (_React$Component) {
                   _react2.default.createElement('img', { id: 'groundTexture', src: 'https://cdn.aframe.io/a-painter/images/floor.jpg' }),
                   _react2.default.createElement('img', { id: 'skyTexture', src: 'https://cdn.aframe.io/a-painter/images/sky.jpg' })
                ),
-               _react2.default.createElement(
-                  'a-box',
-                  { src: 'https://i.imgur.com/mYmmbrp.jpg', position: '10 2 -5', rotation: '0 45 45', scale: '2 2 2', 'scale-on-mouseenter': 'to: 2.2 2.2 2.2' },
-                  _react2.default.createElement('a-animation', { width: '4', height: '10', attribute: 'position', to: '10 2.2 -5', direction: 'alternate', dur: '2000', repeat: 'indefinite' }),
-                  _react2.default.createElement('a-animation', { attribute: 'scale', begin: 'mouseenter', dur: '300', to: '2.3 2.3 2.3' }),
-                  _react2.default.createElement('a-animation', { attribute: 'scale', begin: 'mouseleave', dur: '300', to: '2 2 2' }),
-                  _react2.default.createElement('a-animation', { attribute: 'rotation', begin: 'click', dur: '2000', to: '360 405 45' })
-               ),
+               this.generateLinearRow(-17, 6),
                _react2.default.createElement('a-plane', { position: '0 .1 -4', rotation: '-90 0 0', width: '4', height: '4', color: '#7BC8A4' }),
                _react2.default.createElement('a-sky', { height: '2048', radius: '30', src: '#skyTexture', 'theta-length': '90', width: '2048' }),
                _react2.default.createElement('a-circle', { src: '#groundTexture', rotation: '-90 0 0', radius: '32' }),
@@ -9695,7 +9707,7 @@ var Index = function (_React$Component) {
    }]);
 
    return Index;
-}(_react2.default.Component);
+}(_react.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Index, null), document.getElementById('app'));
 

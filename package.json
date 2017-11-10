@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "webpack && node server/index.js",
+    "build-watch": "webpack -w",
+    "start": "nodemon server/index.js",
     "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline"
   },
   "keywords": [
@@ -32,6 +33,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "express": "^4.16.2",
+    "nodemon": "^1.12.1",
     "path": "^0.12.7",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
