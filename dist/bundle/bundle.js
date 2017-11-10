@@ -98,6 +98,7 @@ module.exports = g;
 
 
 __webpack_require__(2)
+__webpack_require__(6)
 
 /***/ }),
 /* 2 */
@@ -83173,6 +83174,22 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+AFRAME.registerComponent('scale-on-mouseenter', {
+   schema: {
+      to: { default: '10 2.5 2.5' }
+   },
+   init: function () {
+      var data = this.data;
+      this.el.addEventListener('mouseenter', function () {
+         this.setAttribute('scale', data.to);
+      });
+   }
+});
 
 /***/ })
 /******/ ]);
