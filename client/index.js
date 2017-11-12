@@ -1,12 +1,63 @@
 'use strict'
 
 import 'aframe';
-import ClmTrackr from './react-components/clm-trackr.js'
+import ClmTrackr from './react-components/clmtrackr.js'
 import { Entity, Scene } from 'aframe-react';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { setInterval } from 'timers';
+const EMOTION_RANGE = ['HAPPY', 'SAD', "ANGRY", "SURPRISED"]
 
 class Index extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            emotion: [],
+            bulletHead: "", 
+            start: props.start
+        }
+        this.emotionHandler = this.emotionHandler.bind(this)
+        this.createBullet = this.createBullet.bind(this)
+        this.tick = this.tick.bind(this) 
+    }
+
+    componentDidMount(event) {
+        this.timer = setInterval(this.tick, 5000)
+        this.currentTime = new Date()
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer)
+    }
+
+    createBullet() {
+        let bullet = this.state.emotion.reduce((pre, cur, i) => {
+            if (cur.value === Math.max(cur.value, pre.value)) return cur
+            return pre
+        }, {emotion: "", value: -1}).emotion
+        console.log('[bullet = ', bullet, ']', this.state)
+        return bullet
+    }
+
+    tick() {
+        //this.setState({ bulletHead: this.createBullet() })
+        this.timer = setInterval(this.tick, 1000)
+        let elapsedTime = new Date - this.state.start
+        this.setState({ bulletHead: this.createBullet() })
+        
+        if (elapsedTime > 5000) { 
+            console.log(elapsedTime )
+            console.log('boom')
+            this.setState({start: new Date})
+            
+            this.timer = setInterval(this.tick, 1000)
+        }
+    }
+
+    emotionHandler(emotion) {
+        this.setState({ emotion: emotion })
+    }
 
     generateLinearRow(startingPoint, limit) {
         let row = [], right = 0;
@@ -26,10 +77,13 @@ class Index extends Component {
     }
 
     render() {
+
+
+
         return (
             <div>
-                <ClmTrackr />
-                
+                <ClmTrackr emotionHandler={this.emotionHandler} />
+
                 {/* <Scene>
                     <a-assets>
                         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
@@ -53,4 +107,4 @@ class Index extends Component {
     }
 }
 
-ReactDOM.render(<Index />, document.getElementById('app'))
+ReactDOM.render(<Index start={Date.now()}/>, document.getElementById('app'))
