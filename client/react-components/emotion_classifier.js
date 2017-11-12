@@ -18,6 +18,7 @@ var emotionClassifier = function() {
 			classifier[m]['bias'] = model[m]['bias'];
 			classifier[m]['coefficients'] = model[m]['coefficients'];
 		}
+	
 		coefficient_length = classifier[emotions[0]]['coefficients'].length;
 	}
 
@@ -70,3 +71,5 @@ var emotionClassifier = function() {
 		}
 	}
 }
+
+export default emotionClassifier

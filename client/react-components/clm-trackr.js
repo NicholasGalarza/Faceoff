@@ -1,17 +1,45 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import pModel from './model_pca_20_svm';
+import clm from './clmtrackr.min.js';
+import emotionModel from './emotionmodel.js';
+import emotionClassifier from './emotion_classifier';
 
 export default class ClmTrackr extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentKey: '',
+      keyPress: false,
+      emotion: []
+    }
+
+    this.keyPressListener = this.keyPressListener.bind(this);
+  }
+
+  keyPressListener(event) {
+    this.setState({currentKey: event.keyCode})
+    
+  }
+
   componentDidMount() {
+   
+    document.addEventListener('keydown', this.keyPressListener)
+    console.log('is htis working', this.state.currentKey)
+    
     var vid = document.getElementById('videoel');
+    console.log(vid)
     var vid_width = vid.width;
     var vid_height = vid.height;
     var overlay = document.getElementById('overlay');
     var overlayCC = overlay.getContext('2d');
 
     /********** check and set up video/webcam **********/
+    /**
+     * Provides requestAnimationFrame in a cross browser way.
+     */
 
     function adjustVideoProportions() {
       // resize overlay and video if proportions are different
@@ -60,7 +88,6 @@ export default class ClmTrackr extends Component {
     }
 
     vid.addEventListener('canplay', startEmotionListener, false);
-
     /*********** setup of emotion detection *************/
 
     // set eigenvector 9 and 11 to not be regularized. This is to better detect motion of the eyebrows
@@ -72,8 +99,10 @@ export default class ClmTrackr extends Component {
     var trackingStarted = false;
 
     var startEmotionListener = function () {
+      
       let eToggle = 0
       function _initWatcher(event) {
+        console.log("Key down event fired")
         const key = String.fromCharCode(event.keyCode).toLowerCase()
         if (key === 'e' && eToggle < 1) {
           startVideo()
@@ -82,13 +111,14 @@ export default class ClmTrackr extends Component {
       }
 
       function _resetWatcher(event) {
+        console.log("key up event fired")
         eToggle = 0
         stopVideo()
         var cp = ctrack.getCurrentParameters();
         var finalVal = ec.meanPredict(cp)
         console.log('DESIRED VALUE', finalVal)
       }
-
+     
       var charElement = document.getElementById("clm-emotion");
       charElement.addEventListener('keydown', _initWatcher, false);
       charElement.addEventListener('keyup', _resetWatcher, false);
@@ -143,17 +173,15 @@ export default class ClmTrackr extends Component {
     var emotionData = ec.getBlank();
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.keyPressListener);
+  }
+
+
   render() {
-  
     return (
       <div>
-
         <div id="clm-emotion">
-          <script src="./utils.js" async></script>
-          <script src="./clmtrackr.min.js" async></script>
-          <script src="./model_pca_20_svm.js" async></script>
-          <script src="./emotion_classifier.js" async></script>
-          <script src="./emotionmodel.js" async></script>
           <div id="content">
             <h2>Emotion Detection</h2>
             <div id="container">

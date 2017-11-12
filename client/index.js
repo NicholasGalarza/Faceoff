@@ -26,12 +26,11 @@ class Index extends Component {
     }
 
     render() {
-        console.log("HIII")
         return (
             <div>
                 <ClmTrackr />
                 
-                <Scene>
+                {/* <Scene>
                     <a-assets>
                         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
                         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
@@ -48,7 +47,7 @@ class Index extends Component {
                     <a-camera>
                         <a-cursor></a-cursor>
                     </a-camera>
-                </Scene>
+                </Scene> */}
             </div>
         )
     }
