@@ -6,6 +6,7 @@ import { Entity, Scene } from 'aframe-react';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { setInterval } from 'timers';
+import _ from 'lodash'
 const EMOTION_RANGE = ['HAPPY', 'SAD', "ANGRY", "SURPRISED"]
 
 class Index extends Component {
@@ -32,12 +33,13 @@ class Index extends Component {
     }
 
     createBullet() {
-        let bullet = this.state.emotion.reduce((pre, cur, i) => {
+        let emotion = this.state.emotion.reduce((pre, cur, i) => {
             if (cur.value === Math.max(cur.value, pre.value)) return cur
             return pre
         }, {emotion: "", value: -1}).emotion
-        console.log('[bullet = ', bullet, ']', this.state)
-        return bullet
+        // const emotion = _.maxBy(er, (o) => { return o.value; });
+        console.log('[bullet = ', emotion, ']', this.state)
+        return emotion
     }
 
     tick() {
