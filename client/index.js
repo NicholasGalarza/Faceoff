@@ -19,42 +19,10 @@ class Index extends Component {
             start: props.start
         }
         this.emotionHandler = this.emotionHandler.bind(this)
-        this.createBullet = this.createBullet.bind(this)
-        this.tick = this.tick.bind(this) 
     }
 
     componentDidMount(event) {
-        this.timer = setInterval(this.tick, 5000)
         this.currentTime = new Date()
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timer)
-    }
-
-    createBullet() {
-        let emotion = this.state.emotion.reduce((pre, cur, i) => {
-            if (cur.value === Math.max(cur.value, pre.value)) return cur
-            return pre
-        }, {emotion: "", value: -1}).emotion
-        // const emotion = _.maxBy(er, (o) => { return o.value; });
-        console.log('[bullet = ', emotion, ']', this.state)
-        return emotion
-    }
-
-    tick() {
-        //this.setState({ bulletHead: this.createBullet() })
-        this.timer = setInterval(this.tick, 1000)
-        let elapsedTime = new Date - this.state.start
-        this.setState({ bulletHead: this.createBullet() })
-        
-        if (elapsedTime > 5000) { 
-            console.log(elapsedTime )
-            console.log('boom')
-            this.setState({start: new Date})
-            
-            this.timer = setInterval(this.tick, 1000)
-        }
     }
 
     emotionHandler(emotion) {
@@ -79,14 +47,11 @@ class Index extends Component {
     }
 
     render() {
-
-
-
         return (
             <div>
                 <ClmTrackr emotionHandler={this.emotionHandler} />
 
-                {/* <Scene>
+                <Scene>
                     <a-assets>
                         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
                         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
@@ -103,7 +68,7 @@ class Index extends Component {
                     <a-camera>
                         <a-cursor></a-cursor>
                     </a-camera>
-                </Scene> */}
+                </Scene>
             </div>
         )
     }

@@ -10,35 +10,59 @@ export default class ReactFacialFeatureTracker extends React.Component {
 
 	constructor(props) {
 		super(props);
-        this.state = {
-            emotion: { emotion: '' }
-        }
+		this.state = {
+			emotion: { emotion: '' }
+		}
 		this.PubSub = props.pubSub;
 	}
 
 	componentDidMount() {
-
 		let overlayCC = this.overlay.getContext('2d');
-
 		let ec = new emotionClassifier();
 		ec.init(emotionModel);
 
 		let emotionData = ec.getBlank();
 
-		getUserMedia({ video : true}, this.getUserMediaCallback.bind(this) );
+		getUserMedia({ video: true }, this.getUserMediaCallback.bind(this));
 
-		let ctrack = new clm.tracker({useWebGL : true});
-
+		let ctrack = new clm.tracker({ useWebGL: true });
 		ctrack.init(pModel);
+		let trackingStarted = false;
 
+		this.trackingStarted = trackingStarted
 		this.ctrack = ctrack;
 		this.overlayCC = overlayCC;
 		this.ec = ec;
 
 		let self = this;
 
-		this.video.addEventListener('canplay', (this.startVideo).bind(this), false);
+		this.video.addEventListener('canplay', (this.startEmotionListener).bind(this), false);
+	}
 
+	startEmotionListener() {
+		let eToggle = 0
+		function _initWatcher(event) {
+			const key = String.fromCharCode(event.keyCode).toLowerCase()
+			if (key === 'e' && eToggle < 1) {
+				this.startVideo()
+				eToggle++;
+			}
+		}
+
+		function _resetWatcher(event) {
+			eToggle = 0
+			this.stopVideo()
+			var cp = this.ctrack.getCurrentParameters();
+			var finalVal = this.ec.meanPredict(cp)
+			console.log('DESIRED VALUE', finalVal)
+		}
+		window.addEventListener('keydown', _initWatcher.bind(this), false);
+		window.addEventListener('keyup', _resetWatcher.bind(this), false);
+	}
+
+	stopVideo() {
+		this.ctrack.stop();
+		this.trackingStarted = false;
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
@@ -50,14 +74,14 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		return false;
 	}
 
-	getUserMediaCallback(err, stream ) {
+	getUserMediaCallback(err, stream) {
 		this.video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
 		this.video.play();
 	}
 
-	startVideo(){
-
-		// start video
+	startVideo() {
+		this.trackingStarted = true;
+		// strt video
 		this.video.play();
 		// start tracking
 		this.ctrack.start(this.video);
@@ -65,26 +89,26 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		this.drawLoop();
 	}
 
-	drawLoop(){
+	drawLoop() {
+		if (this.trackingStarted) {
+			requestAnimationFrame((this.drawLoop).bind(this));
 
-		requestAnimationFrame((this.drawLoop).bind(this));
+			let cp = this.ctrack.getCurrentParameters();
 
-		let cp = this.ctrack.getCurrentParameters();
+			this.overlayCC.clearRect(0, 0, 400, 300);
 
-		this.overlayCC.clearRect(0, 0, 400, 300);
+			if (this.ctrack.getCurrentPosition()) {
+				this.ctrack.draw(this.overlay);
+			}
 
-		if (this.ctrack.getCurrentPosition()) {
-			this.ctrack.draw(this.overlay);
+			let er = this.ec.meanPredict(cp);
+
+			if (er) {
+				const emotion = _.maxBy(er, (o) => { return o.value; });
+				this.setState({ emotion: emotion });
+				this.PubSub.publish('emotions.loop', er);
+			}
 		}
-
-		let er = this.ec.meanPredict(cp);
-
-		if (er) {
-			const emotion = _.maxBy(er, (o) => { return o.value; });
-			this.setState({ emotion: emotion });
-			this.PubSub.publish('emotions.loop', er);
-		}
-
 	}
 
 	render() {
@@ -94,12 +118,12 @@ export default class ReactFacialFeatureTracker extends React.Component {
 					width="400"
 					height="300"
 					controls="false"
-					ref={ (video) => { this.video = video } } ></video>
+					ref={(video) => { this.video = video }} ></video>
 
 				<canvas
 					width="400"
 					height="300"
-					ref={ (canvas) => this.overlay = canvas }></canvas>
+					ref={(canvas) => this.overlay = canvas}></canvas>
 
 			</div>
 		)
