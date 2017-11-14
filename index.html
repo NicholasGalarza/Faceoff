@@ -2,17 +2,18 @@
 
 <head>
   <script src="/bundle.js" defer></script>
-
   <style>
-    .the-video{
-      position: relative;
-    }
+    .the-video,
+    .video-layer,
     .the-video canvas {
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
-      left: 0;
+      z-index: 1;
+    }
+
+    .video-layer {
+      opacity: 0.2;
     }
   </style>
 </head>

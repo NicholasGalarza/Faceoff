@@ -5,9 +5,7 @@ import ClmTrackr from './react-components/clmtrackr.js'
 import { Entity, Scene } from 'aframe-react';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { setInterval } from 'timers';
-import _ from 'lodash'
-const EMOTION_RANGE = ['HAPPY', 'SAD', "ANGRY", "SURPRISED"]
+
 
 class Index extends Component {
     constructor(props) {
@@ -15,7 +13,7 @@ class Index extends Component {
         this.state = {
             bulletAttribute: ""
         }
-        this.setBulletAttribute = this.setBulletAttribute.bind(this); 
+        this.setBulletAttribute = this.setBulletAttribute.bind(this);
     }
 
     componentDidMount(event) {
@@ -23,7 +21,7 @@ class Index extends Component {
     }
 
     setBulletAttribute(emotion) {
-        this.setState({bulletAttribute: emotion})
+        this.setState({ bulletAttribute: emotion })
     }
 
     generateLinearRow(startingPoint, limit) {
@@ -46,8 +44,7 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <ClmTrackr setBulletAttribute={this.setBulletAttribute}/>
-
+                <ClmTrackr setBulletAttribute={this.setBulletAttribute} />
                 <Scene>
                     <a-assets>
                         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
@@ -68,4 +65,4 @@ class Index extends Component {
     }
 }
 
-ReactDOM.render(<Index/>, document.getElementById('app'))
+ReactDOM.render(<Index />, document.getElementById('app'))

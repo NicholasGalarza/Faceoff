@@ -14,7 +14,6 @@ export default class ClmTrackr extends React.Component {
 	}
 
 	render() {
-
 		return (
 			<div>
                 <FFTracker pubSub={PubSub} />

@@ -112,11 +112,14 @@ export default class ReactFacialFeatureTracker extends React.Component {
 	render() {
 		return (
 			<div className="the-video">
-				<video
-					width="400"
-					height="300"
-					controls="false"
-					ref={(video) => { this.video = video }} ></video>
+				<div className="video-layer">
+				<div className="video-opacity"></div>
+					<video
+						width="400"
+						height="300"
+						controls="false"
+						ref={(video) => { this.video = video }} ></video>
+				</div>
 
 				<canvas
 					width="400"
