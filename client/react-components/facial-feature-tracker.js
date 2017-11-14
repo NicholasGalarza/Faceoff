@@ -35,7 +35,6 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		this.ec = ec;
 
 		let self = this;
-
 		this.video.addEventListener('canplay', (this.startEmotionListener).bind(this), false);
 	}
 
@@ -52,9 +51,10 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		function _resetWatcher(event) {
 			eToggle = 0
 			this.stopVideo()
-			var cp = this.ctrack.getCurrentParameters();
-			var finalVal = this.ec.meanPredict(cp)
-			console.log('DESIRED VALUE', finalVal)
+			this.trackingStarted = false; 
+			// var cp = this.ctrack.getCurrentParameters();
+			// var finalVal = this.ec.meanPredict(cp)
+			// console.log('DESIRED VALUE', finalVal)
 		}
 		window.addEventListener('keydown', _initWatcher.bind(this), false);
 		window.addEventListener('keyup', _resetWatcher.bind(this), false);
@@ -82,8 +82,10 @@ export default class ReactFacialFeatureTracker extends React.Component {
 	startVideo() {
 		this.trackingStarted = true;
 		// strt video
+		
 		this.video.play();
 		// start tracking
+		this.ctrack.reset();
 		this.ctrack.start(this.video);
 		// start loop to draw face
 		this.drawLoop();
@@ -124,7 +126,6 @@ export default class ReactFacialFeatureTracker extends React.Component {
 					width="400"
 					height="300"
 					ref={(canvas) => this.overlay = canvas}></canvas>
-
 			</div>
 		)
 	}

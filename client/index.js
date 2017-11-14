@@ -10,23 +10,20 @@ import _ from 'lodash'
 const EMOTION_RANGE = ['HAPPY', 'SAD', "ANGRY", "SURPRISED"]
 
 class Index extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
-            emotion: [],
-            bulletHead: "", 
-            start: props.start
+            bulletAttribute: ""
         }
-        this.emotionHandler = this.emotionHandler.bind(this)
+        this.setBulletAttribute = this.setBulletAttribute.bind(this); 
     }
 
     componentDidMount(event) {
         this.currentTime = new Date()
     }
 
-    emotionHandler(emotion) {
-        this.setState({ emotion: emotion })
+    setBulletAttribute(emotion) {
+        this.setState({bulletAttribute: emotion})
     }
 
     generateLinearRow(startingPoint, limit) {
@@ -49,7 +46,7 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <ClmTrackr emotionHandler={this.emotionHandler} />
+                <ClmTrackr setBulletAttribute={this.setBulletAttribute}/>
 
                 <Scene>
                     <a-assets>
@@ -60,11 +57,8 @@ class Index extends Component {
                     {this.generateLinearRow(-17, 6)}
 
                     <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-
                     <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
-
                     <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
-
                     <a-camera>
                         <a-cursor></a-cursor>
                     </a-camera>
@@ -74,4 +68,4 @@ class Index extends Component {
     }
 }
 
-ReactDOM.render(<Index start={Date.now()}/>, document.getElementById('app'))
+ReactDOM.render(<Index/>, document.getElementById('app'))
