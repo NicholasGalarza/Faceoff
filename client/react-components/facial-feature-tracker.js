@@ -38,6 +38,7 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		this.video.addEventListener('canplay', (this.startEmotionListener).bind(this), false);
 	}
 
+	/* Toggle clm-trackr by hitting 'e' key */
 	startEmotionListener() {
 		let eToggle = 0
 		function _initWatcher(event) {
@@ -51,10 +52,6 @@ export default class ReactFacialFeatureTracker extends React.Component {
 		function _resetWatcher(event) {
 			eToggle = 0
 			this.stopVideo()
-			this.trackingStarted = false; 
-			// var cp = this.ctrack.getCurrentParameters();
-			// var finalVal = this.ec.meanPredict(cp)
-			// console.log('DESIRED VALUE', finalVal)
 		}
 		window.addEventListener('keydown', _initWatcher.bind(this), false);
 		window.addEventListener('keyup', _resetWatcher.bind(this), false);
@@ -82,7 +79,6 @@ export default class ReactFacialFeatureTracker extends React.Component {
 	startVideo() {
 		this.trackingStarted = true;
 		// strt video
-		
 		this.video.play();
 		// start tracking
 		this.ctrack.reset();
