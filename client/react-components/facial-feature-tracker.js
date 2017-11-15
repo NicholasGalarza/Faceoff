@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import getUserMedia from 'getusermedia';
 import emotionClassifier from './emotion_classifier.js';
 import emotionModel from './emotionmodel.js';
@@ -6,7 +6,7 @@ import pModel from './model_pca_20_svm.js';
 import clm from './clmtrackr.min.js';
 import _ from 'lodash';
 
-export default class ReactFacialFeatureTracker extends React.Component {
+export default class ReactFacialFeatureTracker extends Component {
 
 	constructor(props) {
 		super(props);

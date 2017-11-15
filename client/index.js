@@ -1,11 +1,11 @@
 'use strict'
 
 import 'aframe';
+import './aframe-components/event-handler.js'
 import ClmTrackr from './react-components/clmtrackr.js'
 import { Entity, Scene } from 'aframe-react';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
 
 class Index extends Component {
     constructor(props) {
@@ -51,12 +51,12 @@ class Index extends Component {
                         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
                     </a-assets>
 
-                    {this.generateLinearRow(-17, 6)}
+                    {/* {this.generateLinearRow(-17, 6)} */}
 
                     <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
                     <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
                     <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
-                    <a-camera>
+                    <a-camera event-handler>
                         <a-cursor></a-cursor>
                     </a-camera>
                 </Scene>
