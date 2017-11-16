@@ -10,6 +10,7 @@ export default class ClmTrackr extends React.Component {
 	  PubSub.subscribe('emotions.loop', (e,emotions) => {
 		  let object = _.maxBy(emotions, (o) => o.value) 
 		  props.setBulletAttribute(object.emotion)
+		  window.bulletAttribute = object.emotion
 	  });
 	}
 

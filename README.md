@@ -20,6 +20,7 @@ here is the general schema for what you can destroy:
 |  *green* | happy  | 
 |  *blue*  |  sad   | 
 |  *yellow* | suprised | 
+|  *brown* |   any  |
 
 
 
