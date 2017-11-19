@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-entity-generator-component": "^3.0.1",
     "aframe-extras": "^3.12.4",
     "aframe-physics-system": "^2.1.0",
     "aframe-randomizer-components": "^3.0.2",
