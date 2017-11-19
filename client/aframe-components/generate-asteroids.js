@@ -16,7 +16,7 @@ AFRAME.registerComponent('generate-asteroids', {
       asteroid.setAttribute('mixin', data.mixin)
       asteroid.setAttribute('material', 'color', `${colors[random]}`)
       asteroid.setAttribute('class', `asteroid`)
-      console.log(`asteroid${i}`, asteroid)
+      console.log(`asteroid ${i}:`, asteroid)
       // can set color classes to utilize emotion bullet logic. 
       this.el.appendChild(asteroid)
     }

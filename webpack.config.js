@@ -1,11 +1,9 @@
 'use strict'
 
-
 const path = require('path');
 const { resolve } = path
 
 // var PLUGINS = [];
-
 // if (process.env.NODE_ENV === 'production') {
 //   PLUGINS.push(new webpack.optimize.UglifyJsPlugin());
 // }
