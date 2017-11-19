@@ -1,12 +1,22 @@
 # Faceoff!
 ###### (A VR game to destroy floating asteroids)
 Documentation for a-frame: https://aframe.io/docs/0.7.0/introduction/
+
 Documentation for clm-tracker: https://www.auduno.com/clmtrackr/docs/reference.html
+
+
 
 ## Installation
 Fork this project to your local computer, and you must do: 
 1. `npm install`
 2. `npm run start`
+3. Go on over to `localhost:8080`
+
+## Development
+1. `npm run build-watch`
+2. `npm run start`
+3. Go on over to `localhost:8080`
+* Note, you must have `build-watch` and `start` running at the same time
 
 ### How to play
 This game will track your facial expressions to determine what attribute to attach to each bullet. 
