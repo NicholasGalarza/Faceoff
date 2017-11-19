@@ -1,6 +1,6 @@
 AFRAME.registerComponent('face-watcher', {
   init: function () {
-    var el = this.el;
+    let el = this.el;
     window.addEventListener('keyup', function (event) {
       const key = String.fromCharCode(event.keyCode).toLowerCase()
       if (key === 'e') {

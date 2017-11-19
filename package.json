@@ -19,6 +19,7 @@
   "author": "Nicholas Galarza",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^8.0.2",
     "cross-env": "^5.1.1",
     "semistandard": "^11.0.0",
     "snazzy": "^7.0.0",
@@ -26,6 +27,8 @@
   },
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-extras": "^3.12.4",
+    "aframe-physics-system": "^2.1.0",
     "aframe-react": "^4.3.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -40,6 +43,7 @@
     "pubsub-js": "^1.5.7",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "three": "^0.88.0",
     "webpack": "^3.8.1"
   }
 }
