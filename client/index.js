@@ -49,8 +49,10 @@ class Index extends Component {
           <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
           <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
 
-          <a-entity generate-asteroids="mixin: shape position; num: 5;"></a-entity>
-          <a-entity geometry="primitive: box" material="color: red"></a-entity>
+          {/* <a-entity generate-asteroids="mixin: shape position; num: 5;"></a-entity> */}
+          <Entity generate-asteroids={{ mixin: "shape position", num: 5 }} />
+          {/* <a-entity geometry="primitive: box" material="color: red"></a-entity> */}
+          <Entity geometry={{ primitive: 'box', width: 5 }} position="0 0 -5" />
           <a-camera face-watcher >
             <a-cursor></a-cursor>
           </a-camera>
