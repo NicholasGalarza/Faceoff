@@ -53,7 +53,7 @@ class Index extends Component {
           <Entity generate-asteroids={{ mixin: "shape position", num: 5 }} />
           {/* <a-entity geometry="primitive: box" material="color: red"></a-entity> */}
           <Entity geometry={{ primitive: 'box', width: 5 }} position="0 0 -5" />
-          <a-camera face-watcher >
+          <a-camera face-watcher="empty: true" >
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>
