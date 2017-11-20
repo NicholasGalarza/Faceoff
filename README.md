@@ -32,6 +32,12 @@ here is the general schema for what you can destroy:
 |  *yellow* | suprised | 
 |  *brown* |   any  |
 
+###TODO
+1. Make entities render by using component  (a possible alternative would be to use React's ability to create functions inside of {} )
+2. Incorporate `physics system` to fire projectiles
+3. Attatch `clmtrackr's` emotion attribute to each projectile
+4. Add event listeners on asteroids to destroy if attributed bullet collides with object
+
 
 
 
