@@ -1,4 +1,5 @@
 'use strict'
+/* BatchA: Load this in right away>*/
 import 'aframe'
 import 'aframe-extras'
 import 'aframe-physics-system'
@@ -6,10 +7,12 @@ import 'aframe-randomizer-components'
 import 'aframe-entity-generator-component'
 import './aframe-components/face-watcher.js'
 import './aframe-components/generate-asteroids.js'
-import ClmTrackr from './react-components/clmtrackr.js'
-import { Entity, Scene } from 'aframe-react'
+
+/* BatchB: defer loading this rest */
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import ClmTrackr from './react-components/clmtrackr.js'
+import { Entity, Scene } from 'aframe-react'
 
 class Index extends Component {
   constructor(props) {
@@ -29,7 +32,6 @@ class Index extends Component {
   }
 
   render() {
-
     return (
       <div>
         <ClmTrackr setBulletAttribute={this.setBulletAttribute} />
