@@ -1,5 +1,5 @@
 'use strict'
-/* BatchA: Load this in right away>*/
+/* All aframe related dependencies & aframe components */
 import 'aframe'
 import 'aframe-extras'
 import 'aframe-physics-system'

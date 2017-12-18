@@ -26791,14 +26791,13 @@ var App = function (_Component) {
             null,
             _react2.default.createElement('img', { id: 'groundTexture', src: 'https://cdn.aframe.io/a-painter/images/floor.jpg' }),
             _react2.default.createElement('img', { id: 'skyTexture', src: 'https://cdn.aframe.io/a-painter/images/sky.jpg' }),
-            _react2.default.createElement('a-mixin', { id: 'green', material: 'color: green' }),
-            _react2.default.createElement('a-mixin', { id: 'candle', geometry: 'primitive: box; width: 4; height: 4; depth: 4;' }),
-            _react2.default.createElement('a-mixin', { id: 'position', 'random-spherical-position': 'radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360', 'random-rotation': true,
+            _react2.default.createElement('a-mixin', { id: 'shape', geometry: 'primitive: box; width: 4; height: 4; depth: 4;' }),
+            _react2.default.createElement('a-mixin', { id: 'position', 'random-spherical-position': 'radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360', 'random-rotation': 'min: 0; max: 360',
               'random-position': 'min: -43 15 -43; max: 43 60 43' })
           ),
           _react2.default.createElement('a-plane', { position: '0 .1 -4', rotation: '-90 0 0', width: '4', height: '4', color: '#7BC8A4' }),
           _react2.default.createElement('a-circle', { src: '#groundTexture', rotation: '-90 0 0', radius: '32' }),
-          _react2.default.createElement('a-entity', { 'entity-generator': 'mixin: green candle position; num: 10;' }),
+          _react2.default.createElement('a-entity', { 'generate-asteroids': 'mixin: shape position; num: 10;' }),
           _react2.default.createElement(_aframeReact.Entity, { geometry: { primitive: 'box', width: 5 }, position: '0 0 -5' }),
           _react2.default.createElement(
             'a-camera',

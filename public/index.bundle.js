@@ -11012,7 +11012,7 @@ function deserializeQuaternion (message) {
 
 "use strict";
 
-/* BatchA: Load this in right away>*/
+/* All aframe related dependencies & aframe components */
 
 __webpack_require__(133);
 
@@ -111987,43 +111987,33 @@ AFRAME.registerComponent('face-watcher', {
 AFRAME.registerComponent('generate-asteroids', {
   schema: {
     mixin: { default: '' },
-    num: { default: 8 }
+    num: { default: 10 }
   },
 
   init: function init() {
     var data = this.data;
-    // red, green, blue, yellow brown
     var colors = ['#872720', '#284905', '#293963', '#60660c', '#514734'];
-    console.log("WHAT IS THIS?", this);
+    // Create entities with supplied mixin.
+
     for (var i = 0; i < data.num; i++) {
-      var asteroid = document.createElement('a-entity'),
+      var entity = document.createElement('a-entity'),
           random = Math.floor(Math.random() * colors.length);
 
-      asteroid.setAttribute('mixin', data.mixin);
-      asteroid.setAttribute('material', 'color', '' + colors[random]);
-      asteroid.setAttribute('class', 'asteroid');
-
-      // can set color classes to utilize emotion bullet logic. 
-      this.el.appendChild(asteroid);
-      console.log('Asteroids ' + i, asteroid);
+      entity.setAttribute('mixin', data.mixin);
+      entity.setAttribute('class', 'asteroid');
+      entity.setAttribute('material', 'color', '' + colors[random]);
+      this.el.appendChild(entity);
+      console.log(entity);
     }
   },
-
   tick: function tick() {
-    var asteroids = document.querySelectorAll('.asteroid');
-    if (asteroids.length === 0) {
+    var enemies = document.querySelectorAll('.asteroid');
+
+    if (enemies.length === 1) {
       this.init();
     }
   }
 });
-
-// const colorsMap = {
-//     'red' : "#872720", 
-//     'green' : "#284905", 
-//     'blue' : "#293963", 
-//     'yellow' : "#60660c", 
-//     'brown' : "#514734"
-// }
 
 /***/ })
 ],[132]);
