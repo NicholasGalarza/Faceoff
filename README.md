@@ -29,7 +29,7 @@ here is the general schema for what you can destroy:
 |  *red*   | angry  | 
 |  *green* | happy  | 
 |  *blue*  |  sad   | 
-|  *yellow* | suprised | 
+|  *yellow* | suprised |
 |  *brown* |   any  |
 
 ### TODO

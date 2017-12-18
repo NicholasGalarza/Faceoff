@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 export default class ClmTrackr extends React.Component {
 	constructor(props) {
-      super(props);
+    super(props);
 
 	  PubSub.subscribe('emotions.loop', (e,emotions) => {
 		  let object = _.maxBy(emotions, (o) => o.value) 
@@ -17,7 +17,7 @@ export default class ClmTrackr extends React.Component {
 	render() {
 		return (
 			<div>
-                <FFTracker pubSub={PubSub} />
+        <FFTracker pubSub={PubSub} />
 			</div>
 		)
 	}

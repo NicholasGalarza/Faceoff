@@ -26797,7 +26797,7 @@ var App = function (_Component) {
           ),
           _react2.default.createElement('a-plane', { position: '0 .1 -4', rotation: '-90 0 0', width: '4', height: '4', color: '#7BC8A4' }),
           _react2.default.createElement('a-circle', { src: '#groundTexture', rotation: '-90 0 0', radius: '32' }),
-          _react2.default.createElement('a-entity', { 'generate-asteroids': 'mixin: shape position; num: 10;' }),
+          _react2.default.createElement(_aframeReact.Entity, { 'generate-asteroids': { mixin: "shape position", num: 10 } }),
           _react2.default.createElement(_aframeReact.Entity, { geometry: { primitive: 'box', width: 5 }, position: '0 0 -5' }),
           _react2.default.createElement(
             'a-camera',
