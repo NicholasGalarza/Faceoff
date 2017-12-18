@@ -26748,8 +26748,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* BatchB: defer loading this rest */
-
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var App = function (_Component) {
   _inherits(App, _Component);
@@ -26791,13 +26790,15 @@ var App = function (_Component) {
             null,
             _react2.default.createElement('img', { id: 'groundTexture', src: 'https://cdn.aframe.io/a-painter/images/floor.jpg' }),
             _react2.default.createElement('img', { id: 'skyTexture', src: 'https://cdn.aframe.io/a-painter/images/sky.jpg' }),
-            _react2.default.createElement('a-mixin', { id: 'shape', geometry: 'primitive: box; width: 4; height: 4; depth: 4;' }),
-            _react2.default.createElement('a-mixin', { id: 'position', 'random-spherical-position': 'radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360', 'random-rotation': 'min: 0; max: 360',
+            _react2.default.createElement('a-mixin', { id: 'shape', geometry: 'primitive: sphere; radius: 4; segmentsWidth: 18; segmentsHeight: 36' }),
+            _react2.default.createElement('a-mixin', { id: 'position',
+              'random-spherical-position': 'radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360',
+              'random-rotation': 'min: 0; max: 360',
               'random-position': 'min: -43 15 -43; max: 43 60 43' })
           ),
           _react2.default.createElement('a-plane', { position: '0 .1 -4', rotation: '-90 0 0', width: '4', height: '4', color: '#7BC8A4' }),
           _react2.default.createElement('a-circle', { src: '#groundTexture', rotation: '-90 0 0', radius: '32' }),
-          _react2.default.createElement(_aframeReact.Entity, { 'generate-asteroids': { mixin: "shape position", num: 10 } }),
+          _react2.default.createElement(_aframeReact.Entity, { 'generate-asteroids': { mixin: "shape position", num: 15 } }),
           _react2.default.createElement(_aframeReact.Entity, { geometry: { primitive: 'box', width: 5 }, position: '0 0 -5' }),
           _react2.default.createElement(
             'a-camera',
@@ -39285,7 +39286,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -39314,37 +39315,37 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ClmTrackr = function (_React$Component) {
-	_inherits(ClmTrackr, _React$Component);
+var ClmTrackr = function (_Component) {
+  _inherits(ClmTrackr, _Component);
 
-	function ClmTrackr(props) {
-		_classCallCheck(this, ClmTrackr);
+  function ClmTrackr(props) {
+    _classCallCheck(this, ClmTrackr);
 
-		var _this = _possibleConstructorReturn(this, (ClmTrackr.__proto__ || Object.getPrototypeOf(ClmTrackr)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (ClmTrackr.__proto__ || Object.getPrototypeOf(ClmTrackr)).call(this, props));
 
-		_pubsubJs2.default.subscribe('emotions.loop', function (e, emotions) {
-			var object = _lodash2.default.maxBy(emotions, function (o) {
-				return o.value;
-			});
-			props.setBulletAttribute(object.emotion);
-			window.bulletAttribute = object.emotion;
-		});
-		return _this;
-	}
+    _pubsubJs2.default.subscribe('emotions.loop', function (e, emotions) {
+      var object = _lodash2.default.maxBy(emotions, function (o) {
+        return o.value;
+      });
+      props.setBulletAttribute(object.emotion);
+      window.bulletAttribute = object.emotion;
+    });
+    return _this;
+  }
 
-	_createClass(ClmTrackr, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				null,
-				_react2.default.createElement(_facialFeatureTracker2.default, { pubSub: _pubsubJs2.default })
-			);
-		}
-	}]);
+  _createClass(ClmTrackr, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_facialFeatureTracker2.default, { pubSub: _pubsubJs2.default })
+      );
+    }
+  }]);
 
-	return ClmTrackr;
-}(_react2.default.Component);
+  return ClmTrackr;
+}(_react.Component);
 
 exports.default = ClmTrackr;
 
