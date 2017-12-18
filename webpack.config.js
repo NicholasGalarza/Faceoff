@@ -1,21 +1,27 @@
 'use strict'
-
-const path = require('path');
-const { resolve } = path
+const webpack = require('webpack')
+const path = require('path')
 
 // var PLUGINS = [];
 // if (process.env.NODE_ENV === 'production') {
 //   PLUGINS.push(new webpack.optimize.UglifyJsPlugin());
 // }
 
+const extractCommons = new webpack.optimize.CommonsChunkPlugin({
+  name: 'commons',
+  filename: 'commons.js'
+})
+
 const config = {
-  entry: './client/index.js',
+  context: path.resolve(__dirname, 'client'),
+  entry: {
+    index: './index.js',
+    app: './app.jsx'
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: './bundle.js'
+    filename: '[name].bundle.js'
   },
-  // plugins: PLUGINS,
-  context: __dirname,
   devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx']
@@ -24,14 +30,17 @@ const config = {
     loaders: [
       {
         test: /jsx?$/,
-        include: resolve(__dirname, './client'),
+        include: path.resolve(__dirname, 'client'),
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015']
         }
       }
     ]
-  }
+  }, 
+  plugins: [
+    extractCommons
+  ]
 };
 
 module.exports = config
