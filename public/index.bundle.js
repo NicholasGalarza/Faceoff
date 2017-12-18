@@ -112015,6 +112015,14 @@ AFRAME.registerComponent('generate-asteroids', {
   }
 });
 
+// const colorsMap = {
+//   'red' : "#872720",
+//   'green' : "#284905", 
+//   'blue' : "#293963", 
+//   'yellow' : "#60660c", 
+//   'brown' : "#514734"
+// }
+
 /***/ })
 ],[132]);
 //# sourceMappingURL=index.bundle.js.map
