@@ -4,10 +4,10 @@
   "description": "A VR Game that will allow a user to destory objects by giving an appropriate facial expression",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
-    "build-watch": "webpack -w",
-    "start": "nodemon server/index.js",
-    "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline"
+    "build-client": "webpack",
+    "build-client-watch": "webpack -w",
+    "start": "node server/index.js",
+    "start-dev": "nodemon server/index.js"
   },
   "keywords": [
     "a-frame",
