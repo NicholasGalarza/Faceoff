@@ -30,7 +30,7 @@ class App extends Component {
             <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
             <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
 
-            {/* All of my mixins */}
+            {/* All mixin properties */}
             <a-mixin id="shape" geometry="primitive: sphere; radius: 4; segmentsWidth: 18; segmentsHeight: 36"></a-mixin>
             <a-mixin id="position"
               random-spherical-position="radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360"
