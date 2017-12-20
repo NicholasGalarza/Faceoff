@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PubSub from 'pubsub-js';
-import FFTracker from './clm-dependencies/facial-feature-tracker';
-import _ from 'lodash';
+import React, { Component } from 'react'
+import PubSub from 'pubsub-js'
+import FFTracker from './clm-dependencies/facial-feature-tracker'
+import _ from 'lodash'
 
 export default class ClmTrackr extends Component {
   constructor(props) {
