@@ -12,10 +12,6 @@ class App extends Component {
     this.setBulletAttribute = this.setBulletAttribute.bind(this);
   }
 
-  componentDidMount(event) {
-    this.currentTime = new Date()
-  }
-
   setBulletAttribute(emotion) {
     this.setState({ bulletAttribute: emotion })
   }
@@ -31,7 +27,7 @@ class App extends Component {
             <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
 
             {/* All mixin properties */}
-            <a-mixin id="asteroid-shape" 
+            <a-mixin id="asteroid-features"
               geometry="primitive: sphere; radius: 4; segmentsWidth: 18; segmentsHeight: 36">
             </a-mixin>
             <a-mixin id="position"
@@ -43,18 +39,19 @@ class App extends Component {
               geometry="primitive: cylinder; height: 2; radius: 0.5"
               material="color: red; metalness: 0.2; opacity: 0.4; roughness: 0.3; side: double"
               rotation="90 0 0"
-              projectile="speed: -0.15">
+              projectile="speed: -0.15; target: .asteroid">
             </a-mixin>
           </a-assets>
 
           <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
           {/* <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky> */}
           <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
-          {/* <a-entity generate-asteroids="mixin: asteroid-shape position; num: 10;"></a-entity> */}
-          <Entity generate-asteroids={{ mixin: "asteroid-shape position", num: 15 }} />
+          {/* <a-entity generate-asteroids="mixin: asteroid-features position; num: 10;"></a-entity> */}
+          <Entity generate-asteroids={{ mixin: "asteroid-features position", num: 15 }} />
           {/* <a-entity geometry="primitive: box" material="color: red"></a-entity> */}
           <Entity geometry={{ primitive: 'box', width: 5 }} position="0 0 -5" />
-          <a-camera face-watcher="empty: true" >
+          <a-camera face-watcher="empty: true"
+            spawner="mixin: laser">
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>
