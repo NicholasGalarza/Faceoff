@@ -6,7 +6,7 @@ webpackJsonp([1],[
 
 module.exports = Vec3;
 
-var Mat3 = __webpack_require__(19);
+var Mat3 = __webpack_require__(18);
 
 /**
  * 3-dimensional vector
@@ -501,7 +501,7 @@ module.exports = Shape;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Material = __webpack_require__(34);
+var Material = __webpack_require__(33);
 
 /**
  * Base class for shapes
@@ -1101,56 +1101,56 @@ Quaternion.prototype.integrate = function(angularVelocity, dt, angularFactor, ta
 
 // Export classes
 module.exports = {
-    version :                       __webpack_require__(137).version,
+    version :                       __webpack_require__(135).version,
 
-    AABB :                          __webpack_require__(18),
-    ArrayCollisionMatrix :          __webpack_require__(80),
-    Body :                          __webpack_require__(20),
-    Box :                           __webpack_require__(41),
-    Broadphase :                    __webpack_require__(42),
-    Constraint :                    __webpack_require__(27),
-    ContactEquation :               __webpack_require__(21),
-    Narrowphase :                   __webpack_require__(82),
-    ConeTwistConstraint :           __webpack_require__(139),
-    ContactMaterial :               __webpack_require__(85),
-    ConvexPolyhedron :              __webpack_require__(25),
-    Cylinder :                      __webpack_require__(141),
-    DistanceConstraint :            __webpack_require__(142),
-    Equation :                      __webpack_require__(28),
-    EventTarget :                   __webpack_require__(58),
-    FrictionEquation :              __webpack_require__(59),
-    GSSolver :                      __webpack_require__(86),
-    GridBroadphase :                __webpack_require__(143),
-    Heightfield :                   __webpack_require__(144),
-    HingeConstraint :               __webpack_require__(87),
-    LockConstraint :                __webpack_require__(145),
-    Mat3 :                          __webpack_require__(19),
-    Material :                      __webpack_require__(34),
-    NaiveBroadphase :               __webpack_require__(88),
-    ObjectCollisionMatrix :         __webpack_require__(146),
-    Pool :                          __webpack_require__(84),
-    Particle :                      __webpack_require__(89),
-    Plane :                         __webpack_require__(81),
-    PointToPointConstraint :        __webpack_require__(45),
+    AABB :                          __webpack_require__(17),
+    ArrayCollisionMatrix :          __webpack_require__(77),
+    Body :                          __webpack_require__(19),
+    Box :                           __webpack_require__(39),
+    Broadphase :                    __webpack_require__(40),
+    Constraint :                    __webpack_require__(26),
+    ContactEquation :               __webpack_require__(20),
+    Narrowphase :                   __webpack_require__(79),
+    ConeTwistConstraint :           __webpack_require__(137),
+    ContactMaterial :               __webpack_require__(82),
+    ConvexPolyhedron :              __webpack_require__(24),
+    Cylinder :                      __webpack_require__(139),
+    DistanceConstraint :            __webpack_require__(140),
+    Equation :                      __webpack_require__(27),
+    EventTarget :                   __webpack_require__(55),
+    FrictionEquation :              __webpack_require__(56),
+    GSSolver :                      __webpack_require__(83),
+    GridBroadphase :                __webpack_require__(141),
+    Heightfield :                   __webpack_require__(142),
+    HingeConstraint :               __webpack_require__(84),
+    LockConstraint :                __webpack_require__(143),
+    Mat3 :                          __webpack_require__(18),
+    Material :                      __webpack_require__(33),
+    NaiveBroadphase :               __webpack_require__(85),
+    ObjectCollisionMatrix :         __webpack_require__(144),
+    Pool :                          __webpack_require__(81),
+    Particle :                      __webpack_require__(86),
+    Plane :                         __webpack_require__(78),
+    PointToPointConstraint :        __webpack_require__(43),
     Quaternion :                    __webpack_require__(9),
-    Ray :                           __webpack_require__(43),
-    RaycastVehicle :                __webpack_require__(147),
-    RaycastResult :                 __webpack_require__(35),
-    RigidVehicle :                  __webpack_require__(149),
-    RotationalEquation :            __webpack_require__(46),
-    RotationalMotorEquation :       __webpack_require__(60),
-    SAPBroadphase :                 __webpack_require__(150),
-    SPHSystem :                     __webpack_require__(151),
+    Ray :                           __webpack_require__(41),
+    RaycastVehicle :                __webpack_require__(145),
+    RaycastResult :                 __webpack_require__(34),
+    RigidVehicle :                  __webpack_require__(147),
+    RotationalEquation :            __webpack_require__(44),
+    RotationalMotorEquation :       __webpack_require__(57),
+    SAPBroadphase :                 __webpack_require__(148),
+    SPHSystem :                     __webpack_require__(149),
     Shape :                         __webpack_require__(7),
-    Solver :                        __webpack_require__(44),
-    Sphere :                        __webpack_require__(90),
-    SplitSolver :                   __webpack_require__(152),
-    Spring :                        __webpack_require__(153),
-    Transform :                     __webpack_require__(26),
-    Trimesh :                       __webpack_require__(154),
+    Solver :                        __webpack_require__(42),
+    Sphere :                        __webpack_require__(87),
+    SplitSolver :                   __webpack_require__(150),
+    Spring :                        __webpack_require__(151),
+    Transform :                     __webpack_require__(25),
+    Trimesh :                       __webpack_require__(152),
     Vec3 :                          __webpack_require__(2),
-    Vec3Pool :                      __webpack_require__(83),
-    World :                         __webpack_require__(156),
+    Vec3Pool :                      __webpack_require__(80),
+    World :                         __webpack_require__(154),
 };
 
 
@@ -1161,12 +1161,11 @@ module.exports = {
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Vec3 = __webpack_require__(2);
-var Utils = __webpack_require__(33);
+var Utils = __webpack_require__(32);
 
 module.exports = AABB;
 
@@ -1489,7 +1488,7 @@ AABB.prototype.overlapsRay = function(ray){
 };
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Mat3;
@@ -1917,19 +1916,19 @@ Mat3.prototype.transpose = function( target ) {
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Body;
 
-var EventTarget = __webpack_require__(58);
+var EventTarget = __webpack_require__(55);
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
+var Mat3 = __webpack_require__(18);
 var Quaternion = __webpack_require__(9);
-var Material = __webpack_require__(34);
-var AABB = __webpack_require__(18);
-var Box = __webpack_require__(41);
+var Material = __webpack_require__(33);
+var AABB = __webpack_require__(17);
+var Box = __webpack_require__(39);
 
 /**
  * Base class for all body types.
@@ -2837,14 +2836,14 @@ Body.prototype.integrate = function(dt, quatNormalize, quatNormalizeFast){
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = ContactEquation;
 
-var Equation = __webpack_require__(28);
+var Equation = __webpack_require__(27);
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
+var Mat3 = __webpack_require__(18);
 
 /**
  * Contact/non-penetration constraint equation
@@ -2978,10 +2977,10 @@ ContactEquation.prototype.getImpactVelocityAlongNormal = function(){
 
 
 /***/ }),
+/* 21 */,
 /* 22 */,
 /* 23 */,
-/* 24 */,
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = ConvexPolyhedron;
@@ -2989,7 +2988,7 @@ module.exports = ConvexPolyhedron;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Transform = __webpack_require__(26);
+var Transform = __webpack_require__(25);
 
 /**
  * A set of polygons describing a convex shape.
@@ -3913,7 +3912,7 @@ ConvexPolyhedron.project = function(hull, axis, pos, quat, result){
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Vec3 = __webpack_require__(2);
@@ -4022,12 +4021,12 @@ Transform.vectorToLocalFrame = function(position, quaternion, worldVector, resul
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Constraint;
 
-var Utils = __webpack_require__(33);
+var Utils = __webpack_require__(32);
 
 /**
  * Constraint base class
@@ -4119,12 +4118,12 @@ Constraint.idCounter = 0;
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Equation;
 
-var JacobianElement = __webpack_require__(138),
+var JacobianElement = __webpack_require__(136),
     Vec3 = __webpack_require__(2);
 
 /**
@@ -4387,11 +4386,11 @@ Equation.prototype.computeC = function(){
 
 
 /***/ }),
+/* 28 */,
 /* 29 */,
 /* 30 */,
 /* 31 */,
-/* 32 */,
-/* 33 */
+/* 32 */
 /***/ (function(module, exports) {
 
 function Utils(){}
@@ -4420,7 +4419,7 @@ Utils.defaults = function(options, defaults){
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = Material;
@@ -4474,7 +4473,7 @@ Material.idCounter = 0;
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Vec3 = __webpack_require__(2);
@@ -4601,19 +4600,18 @@ RaycastResult.prototype.set = function(
 };
 
 /***/ }),
+/* 35 */,
 /* 36 */,
 /* 37 */,
 /* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Box;
 
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
-var ConvexPolyhedron = __webpack_require__(25);
+var ConvexPolyhedron = __webpack_require__(24);
 
 /**
  * A 3d box shape.
@@ -4847,14 +4845,14 @@ Box.prototype.calculateWorldAABB = function(pos,quat,min,max){
 
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(20);
+var Body = __webpack_require__(19);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
 var Shape = __webpack_require__(7);
-var Plane = __webpack_require__(81);
+var Plane = __webpack_require__(78);
 
 module.exports = Broadphase;
 
@@ -5059,19 +5057,19 @@ Broadphase.prototype.aabbQuery = function(world, aabb, result){
 };
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Ray;
 
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Transform = __webpack_require__(26);
-var ConvexPolyhedron = __webpack_require__(25);
-var Box = __webpack_require__(41);
-var RaycastResult = __webpack_require__(35);
+var Transform = __webpack_require__(25);
+var ConvexPolyhedron = __webpack_require__(24);
+var Box = __webpack_require__(39);
+var RaycastResult = __webpack_require__(34);
 var Shape = __webpack_require__(7);
-var AABB = __webpack_require__(18);
+var AABB = __webpack_require__(17);
 
 /**
  * A line in 3D space that intersects bodies and return points.
@@ -5889,7 +5887,7 @@ function distanceFromIntersection(from, direction, position) {
 
 
 /***/ }),
-/* 44 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = Solver;
@@ -5954,13 +5952,13 @@ Solver.prototype.removeAllEquations = function(){
 
 
 /***/ }),
-/* 45 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = PointToPointConstraint;
 
-var Constraint = __webpack_require__(27);
-var ContactEquation = __webpack_require__(21);
+var Constraint = __webpack_require__(26);
+var ContactEquation = __webpack_require__(20);
 var Vec3 = __webpack_require__(2);
 
 /**
@@ -6051,14 +6049,14 @@ PointToPointConstraint.prototype.update = function(){
 };
 
 /***/ }),
-/* 46 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = RotationalEquation;
 
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
-var Equation = __webpack_require__(28);
+var Mat3 = __webpack_require__(18);
+var Equation = __webpack_require__(27);
 
 /**
  * Rotational constraint. Works to keep the local vectors orthogonal to each other in world space.
@@ -6126,7 +6124,7 @@ RotationalEquation.prototype.computeB = function(h){
 
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, exports) {
 
 /**
@@ -6208,26 +6206,25 @@ function abstractMethod () {
 
 
 /***/ }),
+/* 46 */,
+/* 47 */,
 /* 48 */,
 /* 49 */,
 /* 50 */,
 /* 51 */,
 /* 52 */,
 /* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    math = __webpack_require__(159);
+    math = __webpack_require__(157);
 
 module.exports = {
-  'dynamic-body':   __webpack_require__(162),
-  'static-body':    __webpack_require__(165),
-  'constraint':     __webpack_require__(166),
-  'system':         __webpack_require__(167),
+  'dynamic-body':   __webpack_require__(160),
+  'static-body':    __webpack_require__(163),
+  'constraint':     __webpack_require__(164),
+  'system':         __webpack_require__(165),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -6249,7 +6246,7 @@ window.CANNON = window.CANNON || CANNON;
 
 
 /***/ }),
-/* 58 */
+/* 55 */
 /***/ (function(module, exports) {
 
 /**
@@ -6354,14 +6351,14 @@ EventTarget.prototype = {
 
 
 /***/ }),
-/* 59 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = FrictionEquation;
 
-var Equation = __webpack_require__(28);
+var Equation = __webpack_require__(27);
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
+var Mat3 = __webpack_require__(18);
 
 /**
  * Constrains the slipping in a contact along a tangent
@@ -6419,14 +6416,14 @@ FrictionEquation.prototype.computeB = function(h){
 
 
 /***/ }),
-/* 60 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = RotationalMotorEquation;
 
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
-var Equation = __webpack_require__(28);
+var Mat3 = __webpack_require__(18);
+var Equation = __webpack_require__(27);
 
 /**
  * Rotational motor constraint. Tries to keep the relative angular velocity of the bodies to a given value.
@@ -6495,7 +6492,7 @@ RotationalMotorEquation.prototype.computeB = function(h){
 
 
 /***/ }),
-/* 61 */
+/* 58 */
 /***/ (function(module, exports) {
 
 class Utils {
@@ -6819,6 +6816,9 @@ module.exports = Utils;
 
 
 /***/ }),
+/* 59 */,
+/* 60 */,
+/* 61 */,
 /* 62 */,
 /* 63 */,
 /* 64 */,
@@ -6834,10 +6834,7 @@ module.exports = Utils;
 /* 74 */,
 /* 75 */,
 /* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = ArrayCollisionMatrix;
@@ -6914,7 +6911,7 @@ ArrayCollisionMatrix.prototype.setNumObjects = function(n) {
 
 
 /***/ }),
-/* 81 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Plane;
@@ -6981,23 +6978,23 @@ Plane.prototype.updateBoundingSphereRadius = function(){
 };
 
 /***/ }),
-/* 82 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Narrowphase;
 
-var AABB = __webpack_require__(18);
-var Body = __webpack_require__(20);
+var AABB = __webpack_require__(17);
+var Body = __webpack_require__(19);
 var Shape = __webpack_require__(7);
-var Ray = __webpack_require__(43);
+var Ray = __webpack_require__(41);
 var Vec3 = __webpack_require__(2);
-var Transform = __webpack_require__(26);
-var ConvexPolyhedron = __webpack_require__(25);
+var Transform = __webpack_require__(25);
+var ConvexPolyhedron = __webpack_require__(24);
 var Quaternion = __webpack_require__(9);
-var Solver = __webpack_require__(44);
-var Vec3Pool = __webpack_require__(83);
-var ContactEquation = __webpack_require__(21);
-var FrictionEquation = __webpack_require__(59);
+var Solver = __webpack_require__(42);
+var Vec3Pool = __webpack_require__(80);
+var ContactEquation = __webpack_require__(20);
+var FrictionEquation = __webpack_require__(56);
 
 /**
  * Helper class for the World. Generates ContactEquations.
@@ -8847,13 +8844,13 @@ Narrowphase.prototype.sphereHeightfield = function (
 
 
 /***/ }),
-/* 83 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Vec3Pool;
 
 var Vec3 = __webpack_require__(2);
-var Pool = __webpack_require__(84);
+var Pool = __webpack_require__(81);
 
 /**
  * @class Vec3Pool
@@ -8877,7 +8874,7 @@ Vec3Pool.prototype.constructObject = function(){
 
 
 /***/ }),
-/* 84 */
+/* 81 */
 /***/ (function(module, exports) {
 
 module.exports = Pool;
@@ -8958,10 +8955,10 @@ Pool.prototype.resize = function (size) {
 
 
 /***/ }),
-/* 85 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Utils = __webpack_require__(33);
+var Utils = __webpack_require__(32);
 
 module.exports = ContactMaterial;
 
@@ -9043,14 +9040,14 @@ ContactMaterial.idCounter = 0;
 
 
 /***/ }),
-/* 86 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = GSSolver;
 
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Solver = __webpack_require__(44);
+var Solver = __webpack_require__(42);
 
 /**
  * Constraint equation Gauss-Seidel solver.
@@ -9189,16 +9186,16 @@ GSSolver.prototype.solve = function(dt,world){
 
 
 /***/ }),
-/* 87 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = HingeConstraint;
 
-var Constraint = __webpack_require__(27);
-var PointToPointConstraint = __webpack_require__(45);
-var RotationalEquation = __webpack_require__(46);
-var RotationalMotorEquation = __webpack_require__(60);
-var ContactEquation = __webpack_require__(21);
+var Constraint = __webpack_require__(26);
+var PointToPointConstraint = __webpack_require__(43);
+var RotationalEquation = __webpack_require__(44);
+var RotationalMotorEquation = __webpack_require__(57);
+var ContactEquation = __webpack_require__(20);
 var Vec3 = __webpack_require__(2);
 
 /**
@@ -9329,13 +9326,13 @@ HingeConstraint.prototype.update = function(){
 
 
 /***/ }),
-/* 88 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = NaiveBroadphase;
 
-var Broadphase = __webpack_require__(42);
-var AABB = __webpack_require__(18);
+var Broadphase = __webpack_require__(40);
+var AABB = __webpack_require__(17);
 
 /**
  * Naive broadphase implementation, used in lack of better ones.
@@ -9408,7 +9405,7 @@ NaiveBroadphase.prototype.aabbQuery = function(world, aabb, result){
 };
 
 /***/ }),
-/* 89 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Particle;
@@ -9459,7 +9456,7 @@ Particle.prototype.calculateWorldAABB = function(pos,quat,min,max){
 
 
 /***/ }),
-/* 90 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Sphere;
@@ -9522,13 +9519,13 @@ Sphere.prototype.calculateWorldAABB = function(pos,quat,min,max){
 
 
 /***/ }),
-/* 91 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    mesh2shape = __webpack_require__(92);
+    mesh2shape = __webpack_require__(89);
 
-__webpack_require__(164);
+__webpack_require__(162);
 
 module.exports = {
   schema: {
@@ -9782,11 +9779,11 @@ module.exports = {
 
 
 /***/ }),
-/* 92 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    quickhull = __webpack_require__(163);
+    quickhull = __webpack_require__(161);
 
 var PI_2 = Math.PI / 2;
 
@@ -10151,7 +10148,7 @@ function getMeshes (object) {
 
 
 /***/ }),
-/* 93 */
+/* 90 */
 /***/ (function(module, exports) {
 
 /**
@@ -10232,13 +10229,13 @@ module.exports = fetchScript;
 
 
 /***/ }),
-/* 94 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    mesh2shape = __webpack_require__(92);
+    mesh2shape = __webpack_require__(89);
 
-__webpack_require__(219);
+__webpack_require__(217);
 
 module.exports = {
   schema: {
@@ -10487,11 +10484,11 @@ module.exports = {
 
 
 /***/ }),
-/* 95 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    Driver = __webpack_require__(47);
+    Driver = __webpack_require__(45);
 
 function LocalDriver () {
   this.world = null;
@@ -10603,7 +10600,7 @@ LocalDriver.prototype.getContacts = function () {
 
 
 /***/ }),
-/* 96 */
+/* 93 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -10627,10 +10624,10 @@ module.exports = {
 
 
 /***/ }),
-/* 97 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Driver = __webpack_require__(47);
+var Driver = __webpack_require__(45);
 
 function AmmoDriver () {
   throw new Error('[AmmoDriver] Driver not implemented.');
@@ -10643,11 +10640,11 @@ module.exports = AmmoDriver;
 
 
 /***/ }),
-/* 98 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10);
-var mathUtils = __webpack_require__(228);
+var mathUtils = __webpack_require__(226);
 
 /******************************************************************************
  * IDs
@@ -10974,6 +10971,9 @@ function deserializeQuaternion (message) {
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -11004,32 +11004,29 @@ function deserializeQuaternion (message) {
 /* 126 */,
 /* 127 */,
 /* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /* All aframe related dependencies & aframe components */
 
+__webpack_require__(130);
+
 __webpack_require__(133);
 
-__webpack_require__(135);
+__webpack_require__(212);
 
-__webpack_require__(214);
+__webpack_require__(228);
+
+__webpack_require__(229);
 
 __webpack_require__(230);
 
 __webpack_require__(231);
 
-__webpack_require__(232);
-
-__webpack_require__(233);
-
 /***/ }),
-/* 133 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {var require;var require;(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.AFRAME = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
@@ -93659,20 +93656,21 @@ module.exports = getWakeLock();
 });
 //# sourceMappingURL=aframe-master.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40), __webpack_require__(79).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(76), __webpack_require__(131).setImmediate))
 
 /***/ }),
-/* 134 */,
-/* 135 */
+/* 131 */,
+/* 132 */,
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  controls:    __webpack_require__(136),
-  loaders:     __webpack_require__(179),
-  misc:        __webpack_require__(190),
-  pathfinding: __webpack_require__(199),
-  physics:     __webpack_require__(57),
-  primitives:  __webpack_require__(207),
+  controls:    __webpack_require__(134),
+  loaders:     __webpack_require__(177),
+  misc:        __webpack_require__(188),
+  pathfinding: __webpack_require__(197),
+  physics:     __webpack_require__(54),
+  primitives:  __webpack_require__(205),
 
   registerAll: function () {
     this.controls.registerAll();
@@ -93686,19 +93684,19 @@ module.exports = {
 
 
 /***/ }),
-/* 136 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var physics = __webpack_require__(57);
+var physics = __webpack_require__(54);
 
 module.exports = {
-  'checkpoint-controls': __webpack_require__(169),
-  'gamepad-controls':    __webpack_require__(170),
-  'hmd-controls':        __webpack_require__(173),
-  'keyboard-controls':   __webpack_require__(174),
-  'mouse-controls':      __webpack_require__(176),
-  'touch-controls':      __webpack_require__(177),
-  'universal-controls':  __webpack_require__(178),
+  'checkpoint-controls': __webpack_require__(167),
+  'gamepad-controls':    __webpack_require__(168),
+  'hmd-controls':        __webpack_require__(171),
+  'keyboard-controls':   __webpack_require__(172),
+  'mouse-controls':      __webpack_require__(174),
+  'touch-controls':      __webpack_require__(175),
+  'universal-controls':  __webpack_require__(176),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -93720,13 +93718,13 @@ module.exports = {
 
 
 /***/ }),
-/* 137 */
+/* 135 */
 /***/ (function(module, exports) {
 
 module.exports = {"_from":"github:donmccurdy/cannon.js#v0.6.2-dev1","_id":"cannon@0.6.2","_inBundle":false,"_integrity":"sha1-aLL00Y/jB3A28QDJi3/gJN9o8aA=","_location":"/cannon","_phantomChildren":{},"_requested":{"type":"git","raw":"cannon@github:donmccurdy/cannon.js#v0.6.2-dev1","name":"cannon","escapedName":"cannon","rawSpec":"github:donmccurdy/cannon.js#v0.6.2-dev1","saveSpec":"github:donmccurdy/cannon.js#v0.6.2-dev1","fetchSpec":null,"gitCommittish":"v0.6.2-dev1"},"_requiredBy":["/aframe-physics-system"],"_resolved":"github:donmccurdy/cannon.js#022e8ba53fa83abf0ad8a0e4fd08623123838a17","_spec":"cannon@github:donmccurdy/cannon.js#v0.6.2-dev1","_where":"/Users/plexus/Scripts/FullStackAcademy/SeniorPhase/AFrameProj/node_modules/aframe-physics-system","author":{"name":"Stefan Hedman","email":"schteppe@gmail.com","url":"http://steffe.se"},"bugs":{"url":"https://github.com/schteppe/cannon.js/issues"},"bundleDependencies":false,"dependencies":{},"deprecated":false,"description":"A lightweight 3D physics engine written in JavaScript.","devDependencies":{"browserify":"*","grunt":"~0.4.0","grunt-browserify":"^2.1.4","grunt-contrib-concat":"~0.1.3","grunt-contrib-jshint":"~0.1.1","grunt-contrib-nodeunit":"^0.4.1","grunt-contrib-uglify":"^0.5.1","grunt-contrib-yuidoc":"^0.5.2","jshint":"latest","nodeunit":"^0.9.0","uglify-js":"latest"},"engines":{"node":"*"},"homepage":"https://github.com/schteppe/cannon.js","keywords":["cannon.js","cannon","physics","engine","3d"],"licenses":[{"type":"MIT"}],"main":"./src/Cannon.js","name":"cannon","repository":{"type":"git","url":"git+https://github.com/schteppe/cannon.js.git"},"version":"0.6.2"}
 
 /***/ }),
-/* 138 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = JacobianElement;
@@ -93774,16 +93772,16 @@ JacobianElement.prototype.multiplyVectors = function(spatial,rotational){
 
 
 /***/ }),
-/* 139 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = ConeTwistConstraint;
 
-var Constraint = __webpack_require__(27);
-var PointToPointConstraint = __webpack_require__(45);
-var ConeEquation = __webpack_require__(140);
-var RotationalEquation = __webpack_require__(46);
-var ContactEquation = __webpack_require__(21);
+var Constraint = __webpack_require__(26);
+var PointToPointConstraint = __webpack_require__(43);
+var ConeEquation = __webpack_require__(138);
+var RotationalEquation = __webpack_require__(44);
+var ContactEquation = __webpack_require__(20);
 var Vec3 = __webpack_require__(2);
 
 /**
@@ -93869,14 +93867,14 @@ ConeTwistConstraint.prototype.update = function(){
 
 
 /***/ }),
-/* 140 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = ConeEquation;
 
 var Vec3 = __webpack_require__(2);
-var Mat3 = __webpack_require__(19);
-var Equation = __webpack_require__(28);
+var Mat3 = __webpack_require__(18);
+var Equation = __webpack_require__(27);
 
 /**
  * Cone equation. Works to keep the given body world vectors aligned, or tilted within a given angle from each other.
@@ -93952,7 +93950,7 @@ ConeEquation.prototype.computeB = function(h){
 
 
 /***/ }),
-/* 141 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Cylinder;
@@ -93960,7 +93958,7 @@ module.exports = Cylinder;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var ConvexPolyhedron = __webpack_require__(25);
+var ConvexPolyhedron = __webpack_require__(24);
 
 /**
  * @class Cylinder
@@ -94038,13 +94036,13 @@ Cylinder.prototype = new ConvexPolyhedron();
 
 
 /***/ }),
-/* 142 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = DistanceConstraint;
 
-var Constraint = __webpack_require__(27);
-var ContactEquation = __webpack_require__(21);
+var Constraint = __webpack_require__(26);
+var ContactEquation = __webpack_require__(20);
 
 /**
  * Constrains two bodies to be at a constant distance from each others center of mass.
@@ -94099,12 +94097,12 @@ DistanceConstraint.prototype.update = function(){
 };
 
 /***/ }),
-/* 143 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = GridBroadphase;
 
-var Broadphase = __webpack_require__(42);
+var Broadphase = __webpack_require__(40);
 var Vec3 = __webpack_require__(2);
 var Shape = __webpack_require__(7);
 
@@ -94333,13 +94331,13 @@ GridBroadphase.prototype.collisionPairs = function(world,pairs1,pairs2){
 
 
 /***/ }),
-/* 144 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Shape = __webpack_require__(7);
-var ConvexPolyhedron = __webpack_require__(25);
+var ConvexPolyhedron = __webpack_require__(24);
 var Vec3 = __webpack_require__(2);
-var Utils = __webpack_require__(33);
+var Utils = __webpack_require__(32);
 
 module.exports = Heightfield;
 
@@ -95022,16 +95020,16 @@ Heightfield.prototype.setHeightsFromImage = function(image, scale){
 };
 
 /***/ }),
-/* 145 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = LockConstraint;
 
-var Constraint = __webpack_require__(27);
-var PointToPointConstraint = __webpack_require__(45);
-var RotationalEquation = __webpack_require__(46);
-var RotationalMotorEquation = __webpack_require__(60);
-var ContactEquation = __webpack_require__(21);
+var Constraint = __webpack_require__(26);
+var PointToPointConstraint = __webpack_require__(43);
+var RotationalEquation = __webpack_require__(44);
+var RotationalMotorEquation = __webpack_require__(57);
+var ContactEquation = __webpack_require__(20);
 var Vec3 = __webpack_require__(2);
 
 /**
@@ -95120,7 +95118,7 @@ LockConstraint.prototype.update = function(){
 
 
 /***/ }),
-/* 146 */
+/* 144 */
 /***/ (function(module, exports) {
 
 module.exports = ObjectCollisionMatrix;
@@ -95197,15 +95195,15 @@ ObjectCollisionMatrix.prototype.setNumObjects = function(n) {
 
 
 /***/ }),
-/* 147 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(20);
+var Body = __webpack_require__(19);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var RaycastResult = __webpack_require__(35);
-var Ray = __webpack_require__(43);
-var WheelInfo = __webpack_require__(148);
+var RaycastResult = __webpack_require__(34);
+var Ray = __webpack_require__(41);
+var WheelInfo = __webpack_require__(146);
 
 module.exports = RaycastVehicle;
 
@@ -95905,13 +95903,13 @@ function resolveSingleBilateral(body1, pos1, body2, pos2, normal, impulse){
 }
 
 /***/ }),
-/* 148 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Vec3 = __webpack_require__(2);
-var Transform = __webpack_require__(26);
-var RaycastResult = __webpack_require__(35);
-var Utils = __webpack_require__(33);
+var Transform = __webpack_require__(25);
+var RaycastResult = __webpack_require__(34);
+var Utils = __webpack_require__(32);
 
 module.exports = WheelInfo;
 
@@ -96192,14 +96190,14 @@ WheelInfo.prototype.updateWheel = function(chassis){
 };
 
 /***/ }),
-/* 149 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(20);
-var Sphere = __webpack_require__(90);
-var Box = __webpack_require__(41);
+var Body = __webpack_require__(19);
+var Sphere = __webpack_require__(87);
+var Box = __webpack_require__(39);
 var Vec3 = __webpack_require__(2);
-var HingeConstraint = __webpack_require__(87);
+var HingeConstraint = __webpack_require__(84);
 
 module.exports = RigidVehicle;
 
@@ -96418,11 +96416,11 @@ RigidVehicle.prototype.getWheelSpeed = function(wheelIndex){
 
 
 /***/ }),
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Shape = __webpack_require__(7);
-var Broadphase = __webpack_require__(42);
+var Broadphase = __webpack_require__(40);
 
 module.exports = SAPBroadphase;
 
@@ -96746,7 +96744,7 @@ SAPBroadphase.prototype.aabbQuery = function(world, aabb, result){
 };
 
 /***/ }),
-/* 151 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = SPHSystem;
@@ -96754,9 +96752,9 @@ module.exports = SPHSystem;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Particle = __webpack_require__(89);
-var Body = __webpack_require__(20);
-var Material = __webpack_require__(34);
+var Particle = __webpack_require__(86);
+var Body = __webpack_require__(19);
+var Material = __webpack_require__(33);
 
 /**
  * Smoothed-particle hydrodynamics system
@@ -96965,15 +96963,15 @@ SPHSystem.prototype.nablaw = function(r){
 
 
 /***/ }),
-/* 152 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = SplitSolver;
 
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Solver = __webpack_require__(44);
-var Body = __webpack_require__(20);
+var Solver = __webpack_require__(42);
+var Body = __webpack_require__(19);
 
 /**
  * Splits the equations into islands and solves them independently. Can improve performance.
@@ -97124,7 +97122,7 @@ function sortById(a, b){
 }
 
 /***/ }),
-/* 153 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Vec3 = __webpack_require__(2);
@@ -97323,7 +97321,7 @@ Spring.prototype.applyForce = function(){
 
 
 /***/ }),
-/* 154 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Trimesh;
@@ -97331,9 +97329,9 @@ module.exports = Trimesh;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var Transform = __webpack_require__(26);
-var AABB = __webpack_require__(18);
-var Octree = __webpack_require__(155);
+var Transform = __webpack_require__(25);
+var AABB = __webpack_require__(17);
+var Octree = __webpack_require__(153);
 
 /**
  * @class Trimesh
@@ -97889,10 +97887,10 @@ Trimesh.createTorus = function (radius, tube, radialSegments, tubularSegments, a
 
 
 /***/ }),
-/* 155 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var AABB = __webpack_require__(18);
+var AABB = __webpack_require__(17);
 var Vec3 = __webpack_require__(2);
 
 module.exports = Octree;
@@ -98128,7 +98126,7 @@ OctreeNode.prototype.removeEmptyNodes = function() {
 
 
 /***/ }),
-/* 156 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* global performance */
@@ -98138,21 +98136,21 @@ module.exports = World;
 var Shape = __webpack_require__(7);
 var Vec3 = __webpack_require__(2);
 var Quaternion = __webpack_require__(9);
-var GSSolver = __webpack_require__(86);
-var ContactEquation = __webpack_require__(21);
-var FrictionEquation = __webpack_require__(59);
-var Narrowphase = __webpack_require__(82);
-var EventTarget = __webpack_require__(58);
-var ArrayCollisionMatrix = __webpack_require__(80);
-var OverlapKeeper = __webpack_require__(157);
-var Material = __webpack_require__(34);
-var ContactMaterial = __webpack_require__(85);
-var Body = __webpack_require__(20);
-var TupleDictionary = __webpack_require__(158);
-var RaycastResult = __webpack_require__(35);
-var AABB = __webpack_require__(18);
-var Ray = __webpack_require__(43);
-var NaiveBroadphase = __webpack_require__(88);
+var GSSolver = __webpack_require__(83);
+var ContactEquation = __webpack_require__(20);
+var FrictionEquation = __webpack_require__(56);
+var Narrowphase = __webpack_require__(79);
+var EventTarget = __webpack_require__(55);
+var ArrayCollisionMatrix = __webpack_require__(77);
+var OverlapKeeper = __webpack_require__(155);
+var Material = __webpack_require__(33);
+var ContactMaterial = __webpack_require__(82);
+var Body = __webpack_require__(19);
+var TupleDictionary = __webpack_require__(156);
+var RaycastResult = __webpack_require__(34);
+var AABB = __webpack_require__(17);
+var Ray = __webpack_require__(41);
+var NaiveBroadphase = __webpack_require__(85);
 
 /**
  * The physics world
@@ -99166,7 +99164,7 @@ World.prototype.clearForces = function(){
 
 
 /***/ }),
-/* 157 */
+/* 155 */
 /***/ (function(module, exports) {
 
 module.exports = OverlapKeeper;
@@ -99266,7 +99264,7 @@ OverlapKeeper.prototype.getDiff = function(additions, removals) {
 };
 
 /***/ }),
-/* 158 */
+/* 156 */
 /***/ (function(module, exports) {
 
 module.exports = TupleDictionary;
@@ -99337,12 +99335,12 @@ TupleDictionary.prototype.reset = function() {
 
 
 /***/ }),
-/* 159 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'velocity':   __webpack_require__(160),
-  'quaternion': __webpack_require__(161),
+  'velocity':   __webpack_require__(158),
+  'quaternion': __webpack_require__(159),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -99358,7 +99356,7 @@ module.exports = {
 
 
 /***/ }),
-/* 160 */
+/* 158 */
 /***/ (function(module, exports) {
 
 /**
@@ -99408,7 +99406,7 @@ module.exports = {
 
 
 /***/ }),
-/* 161 */
+/* 159 */
 /***/ (function(module, exports) {
 
 /**
@@ -99441,10 +99439,10 @@ module.exports = {
 
 
 /***/ }),
-/* 162 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(91);
+var Body = __webpack_require__(88);
 
 /**
  * Dynamic body.
@@ -99467,7 +99465,7 @@ module.exports = AFRAME.utils.extend({}, Body, {
 
 
 /***/ }),
-/* 163 */
+/* 161 */
 /***/ (function(module, exports) {
 
 /**
@@ -99923,7 +99921,7 @@ module.exports = (function(){
 
 
 /***/ }),
-/* 164 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -100087,10 +100085,10 @@ module.exports = CANNON.shape2mesh;
 
 
 /***/ }),
-/* 165 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(91);
+var Body = __webpack_require__(88);
 
 /**
  * Static body.
@@ -100106,7 +100104,7 @@ module.exports = AFRAME.utils.extend({}, Body, {
 
 
 /***/ }),
-/* 166 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10);
@@ -100247,11 +100245,11 @@ module.exports = {
 
 
 /***/ }),
-/* 167 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    CONSTANTS = __webpack_require__(168),
+    CONSTANTS = __webpack_require__(166),
     C_GRAV = CONSTANTS.GRAVITY,
     C_MAT = CONSTANTS.CONTACT_MATERIAL;
 
@@ -100410,7 +100408,7 @@ module.exports = {
 
 
 /***/ }),
-/* 168 */
+/* 166 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -100429,7 +100427,7 @@ module.exports = {
 
 
 /***/ }),
-/* 169 */
+/* 167 */
 /***/ (function(module, exports) {
 
 var EPS = 0.1;
@@ -100518,7 +100516,7 @@ module.exports = {
 
 
 /***/ }),
-/* 170 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -100530,8 +100528,8 @@ module.exports = {
  * https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
  */
 
-var GamepadButton = __webpack_require__(171),
-    GamepadButtonEvent = __webpack_require__(172);
+var GamepadButton = __webpack_require__(169),
+    GamepadButtonEvent = __webpack_require__(170);
 
 var JOYSTICK_EPS = 0.2;
 
@@ -100771,7 +100769,7 @@ module.exports = {
 
 
 /***/ }),
-/* 171 */
+/* 169 */
 /***/ (function(module, exports) {
 
 module.exports = Object.assign(function GamepadButton () {}, {
@@ -100798,7 +100796,7 @@ module.exports = Object.assign(function GamepadButton () {}, {
 
 
 /***/ }),
-/* 172 */
+/* 170 */
 /***/ (function(module, exports) {
 
 function GamepadButtonEvent (type, index, details) {
@@ -100812,7 +100810,7 @@ module.exports = GamepadButtonEvent;
 
 
 /***/ }),
-/* 173 */
+/* 171 */
 /***/ (function(module, exports) {
 
 var radToDeg = THREE.Math.radToDeg,
@@ -100899,10 +100897,10 @@ function isNullVector (vector) {
 
 
 /***/ }),
-/* 174 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(175);
+__webpack_require__(173);
 
 var MAX_DELTA = 0.2,
     PROXY_FLAG = '__keyboard-controls-proxy';
@@ -101058,7 +101056,7 @@ module.exports = {
 
 
 /***/ }),
-/* 175 */
+/* 173 */
 /***/ (function(module, exports) {
 
 /**
@@ -101795,7 +101793,7 @@ module.exports = {
 
 
 /***/ }),
-/* 176 */
+/* 174 */
 /***/ (function(module, exports) {
 
 document.exitPointerLock = document.exitPointerLock || document.mozExitPointerLock;
@@ -101949,7 +101947,7 @@ module.exports = {
 
 
 /***/ }),
-/* 177 */
+/* 175 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -102023,7 +102021,7 @@ module.exports = {
 
 
 /***/ }),
-/* 178 */
+/* 176 */
 /***/ (function(module, exports) {
 
 /**
@@ -102236,18 +102234,18 @@ module.exports = {
 
 
 /***/ }),
-/* 179 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'animation-mixer': __webpack_require__(180),
-  'fbx-model': __webpack_require__(181),
-  'gltf-model-next': __webpack_require__(183),
-  'gltf-model-legacy': __webpack_require__(184),
-  'json-model': __webpack_require__(185),
-  'object-model': __webpack_require__(186),
-  'ply-model': __webpack_require__(187),
-  'three-model': __webpack_require__(189),
+  'animation-mixer': __webpack_require__(178),
+  'fbx-model': __webpack_require__(179),
+  'gltf-model-next': __webpack_require__(181),
+  'gltf-model-legacy': __webpack_require__(182),
+  'json-model': __webpack_require__(183),
+  'object-model': __webpack_require__(184),
+  'ply-model': __webpack_require__(185),
+  'three-model': __webpack_require__(187),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -102303,7 +102301,7 @@ module.exports = {
 
 
 /***/ }),
-/* 180 */
+/* 178 */
 /***/ (function(module, exports) {
 
 var LoopMode = {
@@ -102431,10 +102429,10 @@ function regExpEscape (s) {
 
 
 /***/ }),
-/* 181 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-THREE.FBXLoader = __webpack_require__(182);
+THREE.FBXLoader = __webpack_require__(180);
 
 /**
  * fbx-model
@@ -102475,7 +102473,7 @@ module.exports = {
 
 
 /***/ }),
-/* 182 */
+/* 180 */
 /***/ (function(module, exports) {
 
 /**
@@ -107602,10 +107600,10 @@ module.exports = {
 
 
 /***/ }),
-/* 183 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fetchScript = __webpack_require__(93)();
+var fetchScript = __webpack_require__(90)();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r87/examples/js/loaders/GLTFLoader.js';
 // Monkeypatch while waiting for three.js r86.
@@ -107668,10 +107666,10 @@ var loadLoader = (function () {
 
 
 /***/ }),
-/* 184 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fetchScript = __webpack_require__(93)();
+var fetchScript = __webpack_require__(90)();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
 
@@ -107726,7 +107724,7 @@ var loadLoader = (function () {
 
 
 /***/ }),
-/* 185 */
+/* 183 */
 /***/ (function(module, exports) {
 
 /**
@@ -107790,7 +107788,7 @@ module.exports = {
 
 
 /***/ }),
-/* 186 */
+/* 184 */
 /***/ (function(module, exports) {
 
 /**
@@ -107849,7 +107847,7 @@ module.exports = {
 
 
 /***/ }),
-/* 187 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -107857,7 +107855,7 @@ module.exports = {
  *
  * Wraps THREE.PLYLoader.
  */
-THREE.PLYLoader = __webpack_require__(188);
+THREE.PLYLoader = __webpack_require__(186);
 
 /**
  * Loads, caches, resolves geometries.
@@ -107934,7 +107932,7 @@ function createModel (geometry) {
 
 
 /***/ }),
-/* 188 */
+/* 186 */
 /***/ (function(module, exports) {
 
 /**
@@ -108418,7 +108416,7 @@ THREE.PLYLoader.prototype = {
 
 
 /***/ }),
-/* 189 */
+/* 187 */
 /***/ (function(module, exports) {
 
 var DEFAULT_ANIMATION = '__auto__';
@@ -108569,20 +108567,20 @@ module.exports = {
 
 
 /***/ }),
-/* 190 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var physics = __webpack_require__(57);
+var physics = __webpack_require__(54);
 
 module.exports = {
-  'checkpoint':      __webpack_require__(191),
-  'cube-env-map':    __webpack_require__(192),
-  'grab':            __webpack_require__(193),
-  'jump-ability':    __webpack_require__(194),
-  'kinematic-body':  __webpack_require__(195),
-  'mesh-smooth':     __webpack_require__(196),
-  'sphere-collider': __webpack_require__(197),
-  'toggle-velocity': __webpack_require__(198),
+  'checkpoint':      __webpack_require__(189),
+  'cube-env-map':    __webpack_require__(190),
+  'grab':            __webpack_require__(191),
+  'jump-ability':    __webpack_require__(192),
+  'kinematic-body':  __webpack_require__(193),
+  'mesh-smooth':     __webpack_require__(194),
+  'sphere-collider': __webpack_require__(195),
+  'toggle-velocity': __webpack_require__(196),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -108605,7 +108603,7 @@ module.exports = {
 
 
 /***/ }),
-/* 191 */
+/* 189 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -108643,7 +108641,7 @@ module.exports = {
 
 
 /***/ }),
-/* 192 */
+/* 190 */
 /***/ (function(module, exports) {
 
 /**
@@ -108693,7 +108691,7 @@ module.exports = {
 
 
 /***/ }),
-/* 193 */
+/* 191 */
 /***/ (function(module, exports) {
 
 /**
@@ -108769,7 +108767,7 @@ module.exports = {
 
 
 /***/ }),
-/* 194 */
+/* 192 */
 /***/ (function(module, exports) {
 
 var ACCEL_G = -9.8, // m/s^2
@@ -108837,7 +108835,7 @@ module.exports = {
 
 
 /***/ }),
-/* 195 */
+/* 193 */
 /***/ (function(module, exports) {
 
 /**
@@ -109041,7 +109039,7 @@ module.exports = {
 
 
 /***/ }),
-/* 196 */
+/* 194 */
 /***/ (function(module, exports) {
 
 /**
@@ -109060,7 +109058,7 @@ module.exports = {
 
 
 /***/ }),
-/* 197 */
+/* 195 */
 /***/ (function(module, exports) {
 
 /**
@@ -109216,7 +109214,7 @@ module.exports = {
 
 
 /***/ }),
-/* 198 */
+/* 196 */
 /***/ (function(module, exports) {
 
 /**
@@ -109257,13 +109255,13 @@ module.exports = {
 
 
 /***/ }),
-/* 199 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'nav-mesh':    __webpack_require__(200),
-  'nav-controller':     __webpack_require__(201),
-  'system':      __webpack_require__(202),
+  'nav-mesh':    __webpack_require__(198),
+  'nav-controller':     __webpack_require__(199),
+  'system':      __webpack_require__(200),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -109288,7 +109286,7 @@ module.exports = {
 
 
 /***/ }),
-/* 200 */
+/* 198 */
 /***/ (function(module, exports) {
 
 /**
@@ -109322,7 +109320,7 @@ module.exports = {
 
 
 /***/ }),
-/* 201 */
+/* 199 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -109424,10 +109422,10 @@ module.exports = {
 
 
 /***/ }),
-/* 202 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Path = __webpack_require__(203);
+var Path = __webpack_require__(201);
 
 /**
  * nav
@@ -109489,12 +109487,12 @@ module.exports = {
 
 
 /***/ }),
-/* 203 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const utils = __webpack_require__(61);
-const AStar = __webpack_require__(204);
-const Channel = __webpack_require__(206);
+const utils = __webpack_require__(58);
+const AStar = __webpack_require__(202);
+const Channel = __webpack_require__(204);
 
 var polygonId = 1;
 
@@ -109813,11 +109811,11 @@ module.exports = {
 
 
 /***/ }),
-/* 204 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const BinaryHeap = __webpack_require__(205);
-const utils = __webpack_require__(61);
+const BinaryHeap = __webpack_require__(203);
+const utils = __webpack_require__(58);
 
 class AStar {
   static init (graph) {
@@ -109942,7 +109940,7 @@ module.exports = AStar;
 
 
 /***/ }),
-/* 205 */
+/* 203 */
 /***/ (function(module, exports) {
 
 // javascript-astar
@@ -110082,10 +110080,10 @@ module.exports = BinaryHeap;
 
 
 /***/ }),
-/* 206 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const utils = __webpack_require__(61);
+const utils = __webpack_require__(58);
 
 class Channel {
   constructor () {
@@ -110181,14 +110179,14 @@ module.exports = Channel;
 
 
 /***/ }),
-/* 207 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'a-grid':     __webpack_require__(208),
-  'a-hexgrid': __webpack_require__(209),
-  'a-ocean':    __webpack_require__(212),
-  'a-tube':     __webpack_require__(213),
+  'a-grid':     __webpack_require__(206),
+  'a-hexgrid': __webpack_require__(207),
+  'a-ocean':    __webpack_require__(210),
+  'a-tube':     __webpack_require__(211),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -110203,7 +110201,7 @@ module.exports = {
 
 
 /***/ }),
-/* 208 */
+/* 206 */
 /***/ (function(module, exports) {
 
 /**
@@ -110243,11 +110241,11 @@ module.exports.registerAll = (function () {
 
 
 /***/ }),
-/* 209 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var vg = __webpack_require__(210);
-var defaultHexGrid = __webpack_require__(211);
+var vg = __webpack_require__(208);
+var defaultHexGrid = __webpack_require__(209);
 
 /**
  * Hex grid.
@@ -110312,7 +110310,7 @@ module.exports.registerAll = (function () {
 
 
 /***/ }),
-/* 210 */
+/* 208 */
 /***/ (function(module, exports) {
 
 var vg=module.exports={VERSION:"0.1.1",PI:Math.PI,TAU:2*Math.PI,DEG_TO_RAD:.0174532925,RAD_TO_DEG:57.2957795,SQRT3:Math.sqrt(3),TILE:"tile",ENT:"entity",STR:"structure",HEX:"hex",SQR:"square",ABS:"abstract"};vg.Board=function(e,t){if(!e)throw new Error("You must pass in a grid system for the board to use.");this.tiles=[],this.tileGroup=null,this.group=new THREE.Object3D,this.grid=null,this.overlay=null,this.finder=new vg.AStarFinder(t),vg.Loader.init(),this.setGrid(e)},vg.Board.prototype={setEntityOnTile:function(e,t){var i=this.grid.cellToPixel(t.cell);e.position.copy(i),e.position.y+=e.heightOffset||0,e.tile&&(e.tile.entity=null),e.tile=t,t.entity=e},addTile:function(e){var t=this.tiles.indexOf(e);-1===t&&(this.tiles.push(e),this.snapTileToGrid(e),e.position.y=0,this.tileGroup.add(e.mesh),this.grid.add(e.cell),e.cell.tile=e)},removeTile:function(e){if(e){var t=this.tiles.indexOf(e);this.grid.remove(e.cell),-1!==t&&this.tiles.splice(t,1),e.dispose()}},removeAllTiles:function(){if(this.tileGroup)for(var e=this.tileGroup.children,t=0;t<e.length;t++)this.tileGroup.remove(e[t])},getTileAtCell:function(e){var t=this.grid.cellToHash(e);return e.tile||("undefined"!=typeof this.grid.cells[t]?this.grid.cells[t].tile:null)},snapToGrid:function(e){var t=this.grid.pixelToCell(e);e.copy(this.grid.cellToPixel(t))},snapTileToGrid:function(e){if(e.cell)e.position.copy(this.grid.cellToPixel(e.cell));else{var t=this.grid.pixelToCell(e.position);e.position.copy(this.grid.cellToPixel(t))}return e},getRandomTile:function(){var e=vg.Tools.randomInt(0,this.tiles.length-1);return this.tiles[e]},findPath:function(e,t,i){return this.finder.findPath(e.cell,t.cell,i,this.grid)},setGrid:function(e){this.group.remove(this.tileGroup),this.grid&&e!==this.grid&&(this.removeAllTiles(),this.tiles.forEach(function(e){this.grid.remove(e.cell),e.dispose()}),this.grid.dispose()),this.grid=e,this.tiles=[],this.tileGroup=new THREE.Object3D,this.group.add(this.tileGroup)},generateOverlay:function(e){var t=new THREE.LineBasicMaterial({color:0,opacity:.3});this.overlay&&this.group.remove(this.overlay),this.overlay=new THREE.Object3D,this.grid.generateOverlay(e,this.overlay,t),this.group.add(this.overlay)},generateTilemap:function(e){this.reset();var t=this.grid.generateTiles(e);this.tiles=t,this.tileGroup=new THREE.Object3D;for(var i=0;i<t.length;i++)this.tileGroup.add(t[i].mesh);this.group.add(this.tileGroup)},reset:function(){this.removeAllTiles(),this.tileGroup&&this.group.remove(this.tileGroup)}},vg.Board.prototype.constructor=vg.Board,vg.Cell=function(e,t,i,s){this.q=e||0,this.r=t||0,this.s=i||0,this.h=s||1,this.tile=null,this.userData={},this.walkable=!0,this._calcCost=0,this._priority=0,this._visited=!1,this._parent=null,this.uniqueID=vg.LinkedList.generateID()},vg.Cell.prototype={set:function(e,t,i){return this.q=e,this.r=t,this.s=i,this},copy:function(e){return this.q=e.q,this.r=e.r,this.s=e.s,this.h=e.h,this.tile=e.tile||null,this.userData=e.userData||{},this.walkable=e.walkable,this},add:function(e){return this.q+=e.q,this.r+=e.r,this.s+=e.s,this},equals:function(e){return this.q===e.q&&this.r===e.r&&this.s===e.s}},vg.Cell.prototype.constructor=vg.Cell,vg.HexGrid=function(e){e=e||{},this.type=vg.HEX,this.size=5,this.cellSize="undefined"==typeof e.cellSize?10:e.cellSize,this.cells={},this.numCells=0,this.extrudeSettings=null,this.autogenerated=!1;var t,i=[];for(t=0;6>t;t++)i.push(this._createVertex(t));for(this.cellShape=new THREE.Shape,this.cellShape.moveTo(i[0].x,i[0].y),t=1;6>t;t++)this.cellShape.lineTo(i[t].x,i[t].y);this.cellShape.lineTo(i[0].x,i[0].y),this.cellShape.autoClose=!0,this.cellGeo=new THREE.Geometry,this.cellGeo.vertices=i,this.cellGeo.verticesNeedUpdate=!0,this.cellShapeGeo=new THREE.ShapeGeometry(this.cellShape),this._cellWidth=2*this.cellSize,this._cellLength=.5*vg.SQRT3*this._cellWidth,this._hashDelimeter=".",this._directions=[new vg.Cell(1,-1,0),new vg.Cell(1,0,-1),new vg.Cell(0,1,-1),new vg.Cell(-1,1,0),new vg.Cell(-1,0,1),new vg.Cell(0,-1,1)],this._diagonals=[new vg.Cell(2,-1,-1),new vg.Cell(1,1,-2),new vg.Cell(-1,2,-1),new vg.Cell(-2,1,1),new vg.Cell(-1,-1,2),new vg.Cell(1,-2,1)],this._list=[],this._vec3=new THREE.Vector3,this._cel=new vg.Cell,this._conversionVec=new THREE.Vector3,this._geoCache=[],this._matCache=[]},vg.HexGrid.TWO_THIRDS=2/3,vg.HexGrid.prototype={cellToPixel:function(e){return this._vec3.x=e.q*this._cellWidth*.75,this._vec3.y=e.h,this._vec3.z=-((e.s-e.r)*this._cellLength*.5),this._vec3},pixelToCell:function(e){var t=e.x*(vg.HexGrid.TWO_THIRDS/this.cellSize),i=(-e.x/3+vg.SQRT3/3*e.z)/this.cellSize;return this._cel.set(t,i,-t-i),this._cubeRound(this._cel)},getCellAt:function(e){var t=e.x*(vg.HexGrid.TWO_THIRDS/this.cellSize),i=(-e.x/3+vg.SQRT3/3*e.z)/this.cellSize;return this._cel.set(t,i,-t-i),this._cubeRound(this._cel),this.cells[this.cellToHash(this._cel)]},getNeighbors:function(e,t,i){var s,n,l=this._directions.length;for(this._list.length=0,s=0;l>s;s++)this._cel.copy(e),this._cel.add(this._directions[s]),n=this.cells[this.cellToHash(this._cel)],!n||i&&!i(e,n)||this._list.push(n);if(t)for(s=0;l>s;s++)this._cel.copy(e),this._cel.add(this._diagonals[s]),n=this.cells[this.cellToHash(this._cel)],!n||i&&!i(e,n)||this._list.push(n);return this._list},getRandomCell:function(){var e,t=0,i=vg.Tools.randomInt(0,this.numCells);for(e in this.cells){if(t===i)return this.cells[e];t++}return this.cells[e]},cellToHash:function(e){return e.q+this._hashDelimeter+e.r+this._hashDelimeter+e.s},distance:function(e,t){var i=Math.max(Math.abs(e.q-t.q),Math.abs(e.r-t.r),Math.abs(e.s-t.s));return i+=t.h-e.h},clearPath:function(){var e,t;for(e in this.cells)t=this.cells[e],t._calcCost=0,t._priority=0,t._parent=null,t._visited=!1},traverse:function(e){var t;for(t in this.cells)e(this.cells[t])},generateTile:function(e,t,i){var s=Math.abs(e.h);1>s&&(s=1);var n=this._geoCache[s];n||(this.extrudeSettings.amount=s,n=new THREE.ExtrudeGeometry(this.cellShape,this.extrudeSettings),this._geoCache[s]=n);var l=new vg.Tile({size:this.cellSize,scale:t,cell:e,geometry:n,material:i});return e.tile=l,l},generateTiles:function(e){e=e||{};var t=[],i={tileScale:.95,cellSize:this.cellSize,material:null,extrudeSettings:{amount:1,bevelEnabled:!0,bevelSegments:1,steps:1,bevelSize:.5,bevelThickness:.5}};i=vg.Tools.merge(i,e),this.cellSize=i.cellSize,this._cellWidth=2*this.cellSize,this._cellLength=.5*vg.SQRT3*this._cellWidth,this.autogenerated=!0,this.extrudeSettings=i.extrudeSettings;var s,n,l;for(s in this.cells)l=this.cells[s],n=this.generateTile(l,i.tileScale,i.material),n.position.copy(this.cellToPixel(l)),n.position.y=0,t.push(n);return t},generateTilePoly:function(e){e||(e=new THREE.MeshBasicMaterial({color:2405631}));var t=new THREE.Mesh(this.cellShapeGeo,e);return this._vec3.set(1,0,0),t.rotateOnAxis(this._vec3,vg.PI/2),t},generate:function(e){e=e||{},this.size="undefined"==typeof e.size?this.size:e.size;var t,i,s,n;for(t=-this.size;t<this.size+1;t++)for(i=-this.size;i<this.size+1;i++)s=-t-i,Math.abs(t)<=this.size&&Math.abs(i)<=this.size&&Math.abs(s)<=this.size&&(n=new vg.Cell(t,i,s),this.add(n))},generateOverlay:function(e,t,i){var s,n,l,r=this.cellShape.createPointsGeometry();for(s=-e;e+1>s;s++)for(n=-e;e+1>n;n++)if(l=-s-n,Math.abs(s)<=e&&Math.abs(n)<=e&&Math.abs(l)<=e){this._cel.set(s,n,l);var h=new THREE.Line(r,i);h.position.copy(this.cellToPixel(this._cel)),h.rotation.x=90*vg.DEG_TO_RAD,t.add(h)}},add:function(e){var t=this.cellToHash(e);if(!this.cells[t])return this.cells[t]=e,this.numCells++,e},remove:function(e){var t=this.cellToHash(e);this.cells[t]&&(delete this.cells[t],this.numCells--)},dispose:function(){this.cells=null,this.numCells=0,this.cellShape=null,this.cellGeo.dispose(),this.cellGeo=null,this.cellShapeGeo.dispose(),this.cellShapeGeo=null,this._list=null,this._vec3=null,this._conversionVec=null,this._geoCache=null,this._matCache=null},load:function(e,t,i){var s=this;vg.Tools.getJSON({url:e,callback:function(e){s.fromJSON(e),t.call(i||null,e)},cache:!1,scope:s})},fromJSON:function(e){var t,i,s=e.cells;for(this.cells={},this.numCells=0,this.size=e.size,this.cellSize=e.cellSize,this._cellWidth=2*this.cellSize,this._cellLength=.5*vg.SQRT3*this._cellWidth,this.extrudeSettings=e.extrudeSettings,this.autogenerated=e.autogenerated,t=0;t<s.length;t++)i=new vg.Cell,i.copy(s[t]),this.add(i)},toJSON:function(){var e,t,i={size:this.size,cellSize:this.cellSize,extrudeSettings:this.extrudeSettings,autogenerated:this.autogenerated},s=[];for(t in this.cells)e=this.cells[t],s.push({q:e.q,r:e.r,s:e.s,h:e.h,walkable:e.walkable,userData:e.userData});return i.cells=s,i},_createVertex:function(e){var t=vg.TAU/6*e;return new THREE.Vector3(this.cellSize*Math.cos(t),this.cellSize*Math.sin(t),0)},_cubeRound:function(e){var t=Math.round(e.q),i=Math.round(e.r),s=Math.round(e.s),n=Math.abs(t-e.q),l=Math.abs(i-e.r),r=Math.abs(s-e.s);return n>l&&n>r?t=-i-s:l>r?i=-t-s:s=-t-i,this._cel.set(t,i,s)}},vg.HexGrid.prototype.constructor=vg.HexGrid,vg.SqrGrid=function(e){e=e||{},this.type=vg.SQR,this.size=5,this.cellSize="undefined"==typeof e.cellSize?10:e.cellSize,this.cells={},this.numCells=0,this.extrudeSettings=null,this.autogenerated=!1;var t=[];t.push(new THREE.Vector3),t.push(new THREE.Vector3(-this.cellSize,this.cellSize)),t.push(new THREE.Vector3(this.cellSize,this.cellSize)),t.push(new THREE.Vector3(this.cellSize,-this.cellSize)),this.cellShape=new THREE.Shape,this.cellShape.moveTo(-this.cellSize,-this.cellSize),this.cellShape.lineTo(-this.cellSize,this.cellSize),this.cellShape.lineTo(this.cellSize,this.cellSize),this.cellShape.lineTo(this.cellSize,-this.cellSize),this.cellShape.lineTo(-this.cellSize,-this.cellSize),this.cellGeo=new THREE.Geometry,this.cellGeo.vertices=t,this.cellGeo.verticesNeedUpdate=!0,this.cellShapeGeo=new THREE.ShapeGeometry(this.cellShape),this._fullCellSize=2*this.cellSize,this._hashDelimeter=".",this._directions=[new vg.Cell(1,0,0),new vg.Cell(0,-1,0),new vg.Cell(-1,0,0),new vg.Cell(0,1,0)],this._diagonals=[new vg.Cell(-1,-1,0),new vg.Cell(-1,1,0),new vg.Cell(1,1,0),new vg.Cell(1,-1,0)],this._list=[],this._vec3=new THREE.Vector3,this._cel=new vg.Cell,this._conversionVec=new THREE.Vector3,this._geoCache=[],this._matCache=[]},vg.SqrGrid.prototype={cellToPixel:function(e){return this._vec3.x=e.q*this._fullCellSize,this._vec3.y=e.h,this._vec3.z=e.r*this._fullCellSize,this._vec3},pixelToCell:function(e){var t=Math.round(e.x/this._fullCellSize),i=Math.round(e.z/this._fullCellSize);return this._cel.set(t,i,0)},getCellAt:function(e){var t=Math.round(e.x/this._fullCellSize),i=Math.round(e.z/this._fullCellSize);return this._cel.set(t,i),this.cells[this.cellToHash(this._cel)]},getNeighbors:function(e,t,i){var s,n,l=this._directions.length;for(this._list.length=0,s=0;l>s;s++)this._cel.copy(e),this._cel.add(this._directions[s]),n=this.cells[this.cellToHash(this._cel)],!n||i&&!i(e,n)||this._list.push(n);if(t)for(s=0;l>s;s++)this._cel.copy(e),this._cel.add(this._diagonals[s]),n=this.cells[this.cellToHash(this._cel)],!n||i&&!i(e,n)||this._list.push(n);return this._list},getRandomCell:function(){var e,t=0,i=vg.Tools.randomInt(0,this.numCells);for(e in this.cells){if(t===i)return this.cells[e];t++}return this.cells[e]},cellToHash:function(e){return e.q+this._hashDelimeter+e.r},distance:function(e,t){var i=Math.max(Math.abs(e.q-t.q),Math.abs(e.r-t.r));return i+=t.h-e.h},clearPath:function(){var e,t;for(e in this.cells)t=this.cells[e],t._calcCost=0,t._priority=0,t._parent=null,t._visited=!1},traverse:function(e){var t;for(t in this.cells)e(this.cells[t])},generateTile:function(e,t,i){var s=Math.abs(e.h);1>s&&(s=1);var n=this._geoCache[s];n||(this.extrudeSettings.amount=s,n=new THREE.ExtrudeGeometry(this.cellShape,this.extrudeSettings),this._geoCache[s]=n);var l=new vg.Tile({size:this.cellSize,scale:t,cell:e,geometry:n,material:i});return e.tile=l,l},generateTiles:function(e){e=e||{};var t=[],i={tileScale:.95,cellSize:this.cellSize,material:null,extrudeSettings:{amount:1,bevelEnabled:!0,bevelSegments:1,steps:1,bevelSize:.5,bevelThickness:.5}};i=vg.Tools.merge(i,e),this.cellSize=i.cellSize,this._fullCellSize=2*this.cellSize,this.autogenerated=!0,this.extrudeSettings=i.extrudeSettings;var s,n,l;for(s in this.cells)l=this.cells[s],n=this.generateTile(l,i.tileScale,i.material),n.position.copy(this.cellToPixel(l)),n.position.y=0,t.push(n);return t},generateTilePoly:function(e){e||(e=new THREE.MeshBasicMaterial({color:2405631}));var t=new THREE.Mesh(this.cellShapeGeo,e);return this._vec3.set(1,0,0),t.rotateOnAxis(this._vec3,vg.PI/2),t},generate:function(e){e=e||{},this.size="undefined"==typeof e.size?this.size:e.size;var t,i,s,n=Math.ceil(this.size/2);for(t=-n;n>t;t++)for(i=-n;n>i;i++)s=new vg.Cell(t,i+1),this.add(s)},generateOverlay:function(e,t,i){var s,n,l=Math.ceil(e/2);for(s=-l;l>s;s++)for(n=-l;l>n;n++){this._cel.set(s,n);var r=new THREE.Line(this.cellGeo,i);r.position.copy(this.cellToPixel(this._cel)),r.rotation.x=90*vg.DEG_TO_RAD,t.add(r)}},add:function(e){var t=this.cellToHash(e);if(!this.cells[t])return this.cells[t]=e,this.numCells++,e},remove:function(e){var t=this.cellToHash(e);this.cells[t]&&(delete this.cells[t],this.numCells--)},dispose:function(){this.cells=null,this.numCells=0,this.cellShape=null,this.cellGeo.dispose(),this.cellGeo=null,this.cellShapeGeo.dispose(),this.cellShapeGeo=null,this._list=null,this._vec3=null,this._conversionVec=null,this._geoCache=null,this._matCache=null},load:function(e,t,i){vg.Tools.getJSON({url:e,callback:function(e){this.fromJSON(e),t.call(i||null,e)},cache:!1,scope:this})},fromJSON:function(e){var t,i,s=e.cells;for(this.cells={},this.numCells=0,this.size=e.size,this.cellSize=e.cellSize,this._fullCellSize=2*this.cellSize,this.extrudeSettings=e.extrudeSettings,this.autogenerated=e.autogenerated,t=0;t<s.length;t++)i=new vg.Cell,i.copy(s[t]),this.add(i)},toJSON:function(){var e,t,i={size:this.size,cellSize:this.cellSize,extrudeSettings:this.extrudeSettings,autogenerated:this.autogenerated},s=[];for(t in this.cells)e=this.cells[t],s.push({q:e.q,r:e.r,s:e.s,h:e.h,walkable:e.walkable,userData:e.userData});return i.cells=s,i}},vg.SqrGrid.prototype.constructor=vg.SqrGrid,vg.Tile=function(e){e=e||{};var t={cell:null,geometry:null,material:null};if(t=vg.Tools.merge(t,e),!t.cell||!t.geometry)throw new Error("Missing vg.Tile configuration");this.cell=t.cell,this.cell.tile&&this.cell.tile!==this&&this.cell.tile.dispose(),this.cell.tile=this,this.uniqueID=vg.Tools.generateID(),this.geometry=t.geometry,this.material=t.material,this.material||(this.material=new THREE.MeshPhongMaterial({color:vg.Tools.randomizeRGB("30, 30, 30",13)})),this.objectType=vg.TILE,this.entity=null,this.userData={},this.selected=!1,this.highlight="0x0084cc",this.mesh=new THREE.Mesh(this.geometry,this.material),this.mesh.userData.structure=this,this.position=this.mesh.position,this.rotation=this.mesh.rotation,this.rotation.x=-90*vg.DEG_TO_RAD,this.mesh.scale.set(t.scale,t.scale,1),this.material.emissive?this._emissive=this.material.emissive.getHex():this._emissive=null},vg.Tile.prototype={select:function(){return this.material.emissive&&this.material.emissive.setHex(this.highlight),this.selected=!0,this},deselect:function(){return null!==this._emissive&&this.material.emissive&&this.material.emissive.setHex(this._emissive),this.selected=!1,this},toggle:function(){return this.selected?this.deselect():this.select(),this},dispose:function(){this.cell&&this.cell.tile&&(this.cell.tile=null),this.cell=null,this.position=null,this.rotation=null,this.mesh.parent&&this.mesh.parent.remove(this.mesh),this.mesh.userData.structure=null,this.mesh=null,this.material=null,this.userData=null,this.entity=null,this.geometry=null,this._emissive=null}},vg.Tile.prototype.constructor=vg.Tile,function(){var e=function(){this.obj=null,this.next=null,this.prev=null,this.free=!0},t=function(){this.first=null,this.last=null,this.length=0,this.objToNodeMap={},this.uniqueID=Date.now()+""+Math.floor(1e3*Math.random()),this.sortArray=[]};t.generateID=function(){return Math.random().toString(36).slice(2)+Date.now()},t.prototype={getNode:function(e){return this.objToNodeMap[e.uniqueID]},addNode:function(i){var s=new e;if(!i.uniqueID)try{i.uniqueID=t.generateID()}catch(n){return console.error("[LinkedList.addNode] obj passed is immutable: cannot attach necessary identifier"),null}return s.obj=i,s.free=!1,this.objToNodeMap[i.uniqueID]=s,s},swapObjects:function(e,t){this.objToNodeMap[e.obj.uniqueID]=null,this.objToNodeMap[t.uniqueID]=e,e.obj=t},add:function(e){var t=this.objToNodeMap[e.uniqueID];if(t){if(t.free===!1)return;t.obj=e,t.free=!1,t.next=null,t.prev=null}else t=this.addNode(e);if(this.first){if(!this.last)throw new Error("[LinkedList.add] No last in the list -- that shouldn't happen here");this.last.next=t,t.prev=this.last,this.last=t,t.next=null}else this.first=t,this.last=t,t.next=null,t.prev=null;this.length++,this.showDebug&&this.dump("after add")},has:function(e){return!!this.objToNodeMap[e.uniqueID]},moveUp:function(e){this.dump("before move up");var t=this.getNode(e);if(!t)throw"Oops, trying to move an object that isn't in the list";if(t.prev){var i=t.prev,s=i.prev;t==this.last&&(this.last=i);var n=t.next;s&&(s.next=t),t.next=i,t.prev=i.prev,i.next=n,i.prev=t,this.first==i&&(this.first=t)}},moveDown:function(e){var t=this.getNode(e);if(!t)throw"Oops, trying to move an object that isn't in the list";if(t.next){var i=t.next;this.moveUp(i.obj),this.last==i&&(this.last=t)}},sort:function(e){var t,i,s=this.sortArray,n=this.first;for(s.length=0;n;)s.push(n.obj),n=n.next;for(this.clear(),s.sort(e),i=s.length,t=0;i>t;t++)this.add(s[t])},remove:function(e){var t=this.getNode(e);return!t||t.free?!1:(t.prev&&(t.prev.next=t.next),t.next&&(t.next.prev=t.prev),t.prev||(this.first=t.next),t.next||(this.last=t.prev),t.free=!0,t.prev=null,t.next=null,this.length--,!0)},shift:function(){var e=this.first;return 0===this.length?null:(e.prev&&(e.prev.next=e.next),e.next&&(e.next.prev=e.prev),this.first=e.next,e.next||(this.last=null),e.free=!0,e.prev=null,e.next=null,this.length--,e.obj)},pop:function(){var e=this.last;return 0===this.length?null:(e.prev&&(e.prev.next=e.next),e.next&&(e.next.prev=e.prev),this.last=e.prev,e.prev||(this.first=null),e.free=!0,e.prev=null,e.next=null,this.length--,e.obj)},concat:function(e){for(var t=e.first;t;)this.add(t.obj),t=t.next},clear:function(){for(var e=this.first;e;)e.free=!0,e=e.next;this.first=null,this.length=0},dispose:function(){for(var e=this.first;e;)e.obj=null,e=e.next;this.first=null,this.objToNodeMap=null},dump:function(e){console.log("===================="+e+"=====================");for(var t=this.first;t;)console.log("{"+t.obj.toString()+"} previous="+(t.prev?t.prev.obj:"NULL")),t=t.next();console.log("==================================="),console.log("Last: {"+(this.last?this.last.obj:"NULL")+"} First: {"+(this.first?this.first.obj:"NULL")+"}")}},t.prototype.constructor=t,vg.LinkedList=t}(),function(){var e=function(e,t,i,s,n){this._listener=t,this.isOnce=i,this.context=s,this.signal=e,this._priority=n||0};e.prototype={active:!0,params:null,execute:function(e){var t,i;return this.active&&this._listener&&(i=this.params?this.params.concat(e):e,t=this._listener.apply(this.context,i),this.isOnce&&this.detach()),t},detach:function(){return this.isBound()?this.signal.remove(this._listener,this.context):null},isBound:function(){return!!this.signal&&!!this._listener},_destroy:function(){delete this.signal,delete this._listener,delete this.context},toString:function(){return"[SignalBinding isOnce:"+this.isOnce+", isBound:"+this.isBound()+", active:"+this.active+"]"}},e.prototype.constructor=e;var t=function(){this._bindings=[],this._prevParams=null;var e=this;this.dispatch=function(){t.prototype.dispatch.apply(e,arguments)}};t.prototype={memorize:!1,_shouldPropagate:!0,active:!0,validateListener:function(e,t){if("function"!=typeof e)throw new Error("Signal: listener is a required param of {fn}() and should be a Function.".replace("{fn}",t))},_registerListener:function(t,i,s,n){var l,r=this._indexOfListener(t,s);if(-1!==r){if(l=this._bindings[r],l.isOnce!==i)throw new Error("You cannot add"+(i?"":"Once")+"() then add"+(i?"Once":"")+"() the same listener without removing the relationship first.")}else l=new e(this,t,i,s,n),this._addBinding(l);return this.memorize&&this._prevParams&&l.execute(this._prevParams),l},_addBinding:function(e){var t=this._bindings.length;do t--;while(this._bindings[t]&&e._priority<=this._bindings[t]._priority);this._bindings.splice(t+1,0,e)},_indexOfListener:function(e,t){for(var i,s=this._bindings.length;s--;)if(i=this._bindings[s],i._listener===e&&i.context===t)return s;return-1},has:function(e,t){return-1!==this._indexOfListener(e,t)},add:function(e,t,i){return this.validateListener(e,"add"),this._registerListener(e,!1,t,i)},addOnce:function(e,t,i){return this.validateListener(e,"addOnce"),this._registerListener(e,!0,t,i)},remove:function(e,t){this.validateListener(e,"remove");var i=this._indexOfListener(e,t);return-1!==i&&(this._bindings[i]._destroy(),this._bindings.splice(i,1)),e},removeAll:function(e){"undefined"==typeof e&&(e=null);for(var t=this._bindings.length;t--;)e?this._bindings[t].context===e&&(this._bindings[t]._destroy(),this._bindings.splice(t,1)):this._bindings[t]._destroy();e||(this._bindings.length=0)},getNumListeners:function(){return this._bindings.length},halt:function(){this._shouldPropagate=!1},dispatch:function(){if(this.active){var e,t=Array.prototype.slice.call(arguments),i=this._bindings.length;if(this.memorize&&(this._prevParams=t),i){e=this._bindings.slice(),this._shouldPropagate=!0;do i--;while(e[i]&&this._shouldPropagate&&e[i].execute(t)!==!1)}}},forget:function(){this._prevParams=null},dispose:function(){this.removeAll(),delete this._bindings,delete this._prevParams},toString:function(){return"[Signal active:"+this.active+" numListeners:"+this.getNumListeners()+"]"}},t.prototype.constructor=t,vg.Signal=t}(),vg.AStarFinder=function(e){e=e||{};var t={allowDiagonal:!1,heuristicFilter:null};t=vg.Tools.merge(t,e),this.allowDiagonal=t.allowDiagonal,this.heuristicFilter=t.heuristicFilter,this.list=new vg.LinkedList},vg.AStarFinder.prototype={findPath:function(e,t,i,s){var n,l,r,h,o,a;for(i=i||this.heuristicFilter,s.clearPath(),this.list.clear(),this.list.add(e);this.list.length>0;){if(this.list.sort(this.compare),n=this.list.shift(),n._visited=!0,n===t)return vg.PathUtil.backtrace(t);for(r=s.getNeighbors(n,this.allowDiagonal,i),o=0,a=r.length;a>o;o++)if(h=r[o],h.walkable&&(l=n._calcCost+s.distance(n,h),!h._visited||l<h._calcCost)){if(h._visited=!0,h._parent=n,h._calcCost=l,h._priority=l+s.distance(t,h),h===t)return vg.PathUtil.backtrace(t);this.list.add(h)}}return null},compare:function(e,t){return e._priority-t._priority}},vg.AStarFinder.prototype.constructor=vg.AStarFinder,vg.PathUtil={backtrace:function(e){for(var t=[e];e._parent;)e=e._parent,t.push(e);return t.reverse()},biBacktrace:function(e,t){var i=this.backtrace(e),s=this.backtrace(t);return i.concat(s.reverse())},pathLength:function(e){var t,i,s,n,l,r=0;for(t=1;t<e.length;++t)i=e[t-1],s=e[t],n=i[0]-s[0],l=i[1]-s[1],r+=Math.sqrt(n*n+l*l);return r},interpolate:function(e,t,i,s){var n,l,r,h,o,a,c=Math.abs,u=[];for(r=c(i-e),h=c(s-t),n=i>e?1:-1,l=s>t?1:-1,o=r-h;e!==i||t!==s;)u.push([e,t]),a=2*o,a>-h&&(o-=h,e+=n),r>a&&(o+=r,t+=l);return u},expandPath:function(e){var t,i,s,n,l,r,h=[],o=e.length;if(2>o)return h;for(l=0;o-1>l;++l)for(t=e[l],i=e[l+1],s=this.interpolate(t[0],t[1],i[0],i[1]),n=s.length,r=0;n-1>r;++r)h.push(s[r]);return h.push(e[o-1]),h},smoothenPath:function(e,t){var i,s,n,l,r,h,o,a,c,u,d,g,p=t.length,v=t[0][0],f=t[0][1],m=t[p-1][0],_=t[p-1][1];for(i=v,s=f,r=[[i,s]],o=2;p>o;++o){for(c=t[o],n=c[0],l=c[1],u=this.interpolate(i,s,n,l),g=!1,a=1;a<u.length;++a)if(d=u[a],!e.isWalkableAt(d[0],d[1])){g=!0;break}g&&(h=t[o-1],r.push(h),i=h[0],s=h[1])}return r.push([m,_]),r},compressPath:function(e){if(e.length<3)return e;var t,i,s,n,l,r,h=[],o=e[0][0],a=e[0][1],c=e[1][0],u=e[1][1],d=c-o,g=u-a;for(l=Math.sqrt(d*d+g*g),d/=l,g/=l,h.push([o,a]),r=2;r<e.length;r++)t=c,i=u,s=d,n=g,c=e[r][0],u=e[r][1],d=c-t,g=u-i,l=Math.sqrt(d*d+g*g),d/=l,g/=l,(d!==s||g!==n)&&h.push([t,i]);return h.push([c,u]),h}},vg.Loader={manager:null,imageLoader:null,crossOrigin:!1,init:function(e){this.crossOrigin=e||!1,this.manager=new THREE.LoadingManager(function(){},function(){},function(){console.warn("Error loading images")}),this.imageLoader=new THREE.ImageLoader(this.manager),this.imageLoader.crossOrigin=e},loadTexture:function(e,t,i,s){var n=new THREE.Texture(null,t);return this.imageLoader.load(e,function(e){n.image=e,n.needsUpdate=!0,i&&i(n)},null,function(e){s&&s(e)}),n.sourceFile=e,n}},vg.MouseCaster=function(e,t,i){this.down=!1,this.rightDown=!1,this.pickedObject=null,this.selectedObject=null,this.allHits=null,this.active=!0,this.shift=!1,this.ctrl=!1,this.wheel=0,this.position=new THREE.Vector3,this.screenPosition=new THREE.Vector2,this.signal=new vg.Signal,this.group=e,this._camera=t,this._raycaster=new THREE.Raycaster,this._preventDefault=!1,i=i||document,i.addEventListener("mousemove",this._onDocumentMouseMove.bind(this),!1),i.addEventListener("mousedown",this._onDocumentMouseDown.bind(this),!1),i.addEventListener("mouseup",this._onDocumentMouseUp.bind(this),!1),i.addEventListener("mousewheel",this._onMouseWheel.bind(this),!1),i.addEventListener("DOMMouseScroll",this._onMouseWheel.bind(this),!1)},vg.MouseCaster.OVER="over",vg.MouseCaster.OUT="out",vg.MouseCaster.DOWN="down",vg.MouseCaster.UP="up",vg.MouseCaster.CLICK="click",vg.MouseCaster.WHEEL="wheel",vg.MouseCaster.prototype={update:function(){if(this.active){this._raycaster.setFromCamera(this.screenPosition,this._camera);var e,t,i=this._raycaster.intersectObject(this.group,!0);i.length>0?(e=i[0],t=e.object.userData.structure,this.pickedObject!=t&&(this.pickedObject&&this.signal.dispatch(vg.MouseCaster.OUT,this.pickedObject),this.pickedObject=t,this.selectedObject=null,this.signal.dispatch(vg.MouseCaster.OVER,this.pickedObject)),this.position.copy(e.point),this.screenPosition.z=e.distance):(this.pickedObject&&this.signal.dispatch(vg.MouseCaster.OUT,this.pickedObject),this.pickedObject=null,this.selectedObject=null),this.allHits=i}},preventDefault:function(){this._preventDefault=!0},_onDocumentMouseDown:function(e){return e=e||window.event,e.preventDefault(),this._preventDefault?(this._preventDefault=!1,!1):(this.pickedObject&&(this.selectedObject=this.pickedObject),this.shift=e.shiftKey,this.ctrl=e.ctrlKey,this.down=1===e.which,this.rightDown=3===e.which,void this.signal.dispatch(vg.MouseCaster.DOWN,this.pickedObject))},_onDocumentMouseUp:function(e){return e.preventDefault(),this._preventDefault?(this._preventDefault=!1,!1):(this.shift=e.shiftKey,this.ctrl=e.ctrlKey,this.signal.dispatch(vg.MouseCaster.UP,this.pickedObject),this.selectedObject&&this.pickedObject&&this.selectedObject.uniqueID===this.pickedObject.uniqueID&&this.signal.dispatch(vg.MouseCaster.CLICK,this.pickedObject),this.down=1===e.which?!1:this.down,void(this.rightDown=3===e.which?!1:this.rightDown))},_onDocumentMouseMove:function(e){e.preventDefault(),this.screenPosition.x=e.clientX/window.innerWidth*2-1,this.screenPosition.y=2*-(e.clientY/window.innerHeight)+1},_onMouseWheel:function(e){if(this.active){e.preventDefault(),e.stopPropagation();var t=0;void 0!==e.wheelDelta?t=e.wheelDelta:void 0!==e.detail&&(t=-e.detail),t>0?this.wheel++:this.wheel--,this.signal.dispatch(vg.MouseCaster.WHEEL,this.wheel)}}},vg.MouseCaster.prototype.constructor=vg.MouseCaster,vg.Scene=function(e,t){var i={element:document.body,alpha:!0,antialias:!0,clearColor:"#fff",sortObjects:!1,fog:null,light:new THREE.DirectionalLight(16777215),lightPosition:null,cameraType:"PerspectiveCamera",cameraPosition:null,orthoZoom:4},s={minDistance:100,maxDistance:1e3,zoomSpeed:2,noZoom:!1};if(i=vg.Tools.merge(i,e),"boolean"!=typeof t&&(s=vg.Tools.merge(s,t)),this.renderer=new THREE.WebGLRenderer({alpha:i.alpha,antialias:i.antialias}),this.renderer.setClearColor(i.clearColor,0),this.renderer.sortObjects=i.sortObjects,this.width=window.innerWidth,this.height=window.innerHeight,this.orthoZoom=i.orthoZoom,this.container=new THREE.Scene,this.container.fog=i.fog,this.container.add(new THREE.AmbientLight(14540253)),i.lightPosition||i.light.position.set(-1,1,-1).normalize(),this.container.add(i.light),"OrthographicCamera"===i.cameraType){var n=window.innerWidth/this.orthoZoom,l=window.innerHeight/this.orthoZoom;this.camera=new THREE.OrthographicCamera(n/-2,n/2,l/2,l/-2,1,5e3)}else this.camera=new THREE.PerspectiveCamera(50,this.width/this.height,1,5e3);this.contolled=!!t,this.contolled&&(this.controls=new THREE.OrbitControls(this.camera,this.renderer.domElement),this.controls.minDistance=s.minDistance,this.controls.maxDistance=s.maxDistance,this.controls.zoomSpeed=s.zoomSpeed,this.controls.noZoom=s.noZoom),i.cameraPosition&&this.camera.position.copy(i.cameraPosition),window.addEventListener("resize",function(){if(this.width=window.innerWidth,this.height=window.innerHeight,"OrthographicCamera"===this.camera.type){var e=this.width/this.orthoZoom,t=this.height/this.orthoZoom;this.camera.left=e/-2,this.camera.right=e/2,this.camera.top=t/2,this.camera.bottom=t/-2}else this.camera.aspect=this.width/this.height;this.camera.updateProjectionMatrix(),this.renderer.setSize(this.width,this.height)}.bind(this),!1),this.attachTo(i.element)},vg.Scene.prototype={attachTo:function(e){e.style.width=this.width+"px",e.style.height=this.height+"px",this.renderer.setPixelRatio(window.devicePixelRatio),this.renderer.setSize(this.width,this.height),e.appendChild(this.renderer.domElement)},add:function(e){this.container.add(e)},remove:function(e){this.container.remove(e)},render:function(){this.contolled&&this.controls.update(),this.renderer.render(this.container,this.camera)},updateOrthoZoom:function(){if(this.orthoZoom<=0)return void(this.orthoZoom=0);var e=this.width/this.orthoZoom,t=this.height/this.orthoZoom;this.camera.left=e/-2,this.camera.right=e/2,this.camera.top=t/2,this.camera.bottom=t/-2,this.camera.updateProjectionMatrix()},focusOn:function(e){this.camera.lookAt(e.position)}},vg.Scene.prototype.constructor=vg.Scene,vg.SelectionManager=function(e){this.mouse=e,this.onSelect=new vg.Signal,this.onDeselect=new vg.Signal,this.selected=null,this.toggleSelection=!1,this.mouse.signal.add(this.onMouse,this)},vg.SelectionManager.prototype={select:function(e,t){e&&(t=t||!0,this.selected!==e&&this.clearSelection(t),e.selected?this.toggleSelection&&(t&&this.onDeselect.dispatch(e),e.deselect()):e.select(),this.selected=e,t&&this.onSelect.dispatch(e))},clearSelection:function(e){e=e||!0,this.selected&&(e&&this.onDeselect.dispatch(this.selected),this.selected.deselect()),this.selected=null},onMouse:function(e,t){switch(e){case vg.MouseCaster.DOWN:t||this.clearSelection();break;case vg.MouseCaster.CLICK:this.select(t)}}},vg.SelectionManager.prototype.constructor=vg.SelectionManager,vg.Tools={clamp:function(e,t,i){return Math.max(t,Math.min(i,e))},sign:function(e){return e&&e/Math.abs(e)},random:function(e,t){return 1===arguments.length?Math.random()*e-.5*e:Math.random()*(t-e)+e},randomInt:function(e,t){return 1===arguments.length?Math.random()*e-.5*e|0:Math.random()*(t-e+1)+e|0},normalize:function(e,t,i){return(e-t)/(i-t)},getShortRotation:function(e){return e%=this.TAU,e>this.PI?e-=this.TAU:e<-this.PI&&(e+=this.TAU),e},generateID:function(){return Math.random().toString(36).slice(2)+Date.now()},isPlainObject:function(e){if("object"!=typeof e||e.nodeType||e===e.window)return!1;try{if(e.constructor&&!Object.prototype.hasOwnProperty.call(e.constructor.prototype,"isPrototypeOf"))return!1}catch(t){return!1}return!0},merge:function(e,t){var i=this,s=Array.isArray(t),n=s&&[]||{};return s?(e=e||[],n=n.concat(e),t.forEach(function(t,s){"undefined"==typeof n[s]?n[s]=t:i.isPlainObject(t)?n[s]=i.merge(e[s],t):-1===e.indexOf(t)&&n.push(t)}),n):(e&&i.isPlainObject(e)&&Object.keys(e).forEach(function(t){n[t]=e[t];
@@ -110321,13 +110319,13 @@ var vg=module.exports={VERSION:"0.1.1",PI:Math.PI,TAU:2*Math.PI,DEG_TO_RAD:.0174
 
 
 /***/ }),
-/* 211 */
+/* 209 */
 /***/ (function(module, exports) {
 
 module.exports = {"size":5,"cellSize":10,"extrudeSettings":{"amount":1,"bevelEnabled":true,"bevelSegments":1,"steps":1,"bevelSize":0.5,"bevelThickness":0.5},"autogenerated":true,"cells":[{"q":-1,"r":0,"s":1,"h":1,"walkable":true,"userData":{}},{"q":0,"r":-1,"s":1,"h":1,"walkable":true,"userData":{}},{"q":0,"r":0,"s":0,"h":1,"walkable":true,"userData":{}},{"q":1,"r":-1,"s":0,"h":1,"walkable":true,"userData":{}},{"q":-1,"r":1,"s":0,"h":0,"walkable":true,"userData":{}},{"q":0,"r":1,"s":-1,"h":0,"walkable":true,"userData":{}},{"q":1,"r":0,"s":-1,"h":0,"walkable":true,"userData":{}}]}
 
 /***/ }),
-/* 212 */
+/* 210 */
 /***/ (function(module, exports) {
 
 /**
@@ -110438,7 +110436,7 @@ module.exports.registerAll = (function () {
 
 
 /***/ }),
-/* 213 */
+/* 211 */
 /***/ (function(module, exports) {
 
 /**
@@ -110517,16 +110515,16 @@ module.exports.registerAll = (function () {
 
 
 /***/ }),
-/* 214 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10);
 
-__webpack_require__(215);
+__webpack_require__(213);
+__webpack_require__(216);
 __webpack_require__(218);
+__webpack_require__(219);
 __webpack_require__(220);
-__webpack_require__(221);
-__webpack_require__(222);
 
 module.exports = {
   registerAll: function () {
@@ -110539,12 +110537,12 @@ window.CANNON = window.CANNON || CANNON;
 
 
 /***/ }),
-/* 215 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'velocity':   __webpack_require__(216),
-  'quaternion': __webpack_require__(217),
+  'velocity':   __webpack_require__(214),
+  'quaternion': __webpack_require__(215),
 
   registerAll: function (AFRAME) {
     if (this._registered) return;
@@ -110560,7 +110558,7 @@ module.exports = {
 
 
 /***/ }),
-/* 216 */
+/* 214 */
 /***/ (function(module, exports) {
 
 /**
@@ -110610,7 +110608,7 @@ module.exports = AFRAME.registerComponent('velocity', {
 
 
 /***/ }),
-/* 217 */
+/* 215 */
 /***/ (function(module, exports) {
 
 /**
@@ -110643,10 +110641,10 @@ module.exports = AFRAME.registerComponent('quaternion', {
 
 
 /***/ }),
-/* 218 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(94);
+var Body = __webpack_require__(91);
 
 /**
  * Dynamic body.
@@ -110673,7 +110671,7 @@ module.exports = AFRAME.registerComponent('dynamic-body', DynamicBody);
 
 
 /***/ }),
-/* 219 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -110837,10 +110835,10 @@ module.exports = CANNON.shape2mesh;
 
 
 /***/ }),
-/* 220 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Body = __webpack_require__(94);
+var Body = __webpack_require__(91);
 
 /**
  * Static body.
@@ -110858,7 +110856,7 @@ module.exports = AFRAME.registerComponent('static-body', StaticBody);
 
 
 /***/ }),
-/* 221 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10);
@@ -111006,18 +111004,18 @@ module.exports = AFRAME.registerComponent('constraint', {
 
 
 /***/ }),
-/* 222 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CANNON = __webpack_require__(10),
-    CONSTANTS = __webpack_require__(223),
+    CONSTANTS = __webpack_require__(221),
     C_GRAV = CONSTANTS.GRAVITY,
     C_MAT = CONSTANTS.CONTACT_MATERIAL;
 
-var LocalDriver = __webpack_require__(95),
-    WorkerDriver = __webpack_require__(224),
-    NetworkDriver = __webpack_require__(229),
-    AmmoDriver = __webpack_require__(97);
+var LocalDriver = __webpack_require__(92),
+    WorkerDriver = __webpack_require__(222),
+    NetworkDriver = __webpack_require__(227),
+    AmmoDriver = __webpack_require__(94);
 
 /**
  * Physics system.
@@ -111242,7 +111240,7 @@ module.exports = AFRAME.registerSystem('physics', {
 
 
 /***/ }),
-/* 223 */
+/* 221 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -111261,17 +111259,17 @@ module.exports = {
 
 
 /***/ }),
-/* 224 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* global performance */
 
-var webworkify = __webpack_require__(225),
-    webworkifyDebug = __webpack_require__(226),
-    Driver = __webpack_require__(47),
-    Event = __webpack_require__(96),
-    worker = __webpack_require__(227),
-    protocol = __webpack_require__(98);
+var webworkify = __webpack_require__(223),
+    webworkifyDebug = __webpack_require__(224),
+    Driver = __webpack_require__(45),
+    Event = __webpack_require__(93),
+    worker = __webpack_require__(225),
+    protocol = __webpack_require__(95);
 
 var ID = protocol.ID;
 
@@ -111490,7 +111488,7 @@ WorkerDriver.prototype.getContacts = function () {
 
 
 /***/ }),
-/* 225 */
+/* 223 */
 /***/ (function(module, exports) {
 
 var bundleFn = arguments[3];
@@ -111576,7 +111574,7 @@ module.exports = function (fn, options) {
 
 
 /***/ }),
-/* 226 */
+/* 224 */
 /***/ (function(module, exports) {
 
 /**
@@ -111623,13 +111621,13 @@ EventTarget.prototype.postMessage = function (msg) {
 
 
 /***/ }),
-/* 227 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Event = __webpack_require__(96),
-    LocalDriver = __webpack_require__(95),
-    AmmoDriver = __webpack_require__(97),
-    protocol = __webpack_require__(98);
+var Event = __webpack_require__(93),
+    LocalDriver = __webpack_require__(92),
+    AmmoDriver = __webpack_require__(94),
+    protocol = __webpack_require__(95);
 
 var ID = protocol.ID;
 
@@ -111720,7 +111718,7 @@ module.exports = function (self) {
 
 
 /***/ }),
-/* 228 */
+/* 226 */
 /***/ (function(module, exports) {
 
 module.exports.slerp = function ( a, b, t ) {
@@ -111789,10 +111787,10 @@ module.exports.slerp = function ( a, b, t ) {
 
 
 /***/ }),
-/* 229 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Driver = __webpack_require__(47);
+var Driver = __webpack_require__(45);
 
 function NetworkDriver () {
   throw new Error('[NetworkDriver] Driver not implemented.');
@@ -111805,7 +111803,7 @@ module.exports = NetworkDriver;
 
 
 /***/ }),
-/* 230 */
+/* 228 */
 /***/ (function(module, exports) {
 
 if (typeof AFRAME === 'undefined') {
@@ -111924,7 +111922,7 @@ AFRAME.registerComponent('random-scale', {
 
 
 /***/ }),
-/* 231 */
+/* 229 */
 /***/ (function(module, exports) {
 
 if (typeof AFRAME === 'undefined') {
@@ -111955,7 +111953,7 @@ AFRAME.registerComponent('entity-generator', {
 
 
 /***/ }),
-/* 232 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111978,7 +111976,7 @@ AFRAME.registerComponent('face-watcher', {
 });
 
 /***/ }),
-/* 233 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112024,5 +112022,5 @@ AFRAME.registerComponent('generate-asteroids', {
 // }
 
 /***/ })
-],[132]);
+],[129]);
 //# sourceMappingURL=index.bundle.js.map
