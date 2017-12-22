@@ -111996,7 +111996,11 @@ AFRAME.registerComponent('generate-asteroids', {
 
   init: function init() {
     var data = this.data;
-    var colors = ['#872720', '#284905', '#293963', '#60660c', '#514734'];
+    var colors = ['#872720', '#284905', '#293963', '#60660c', '#514734'],
+
+    //colorTone = ['red', 'green', 'blue', 'yellow', 'brown']
+    emotionMap = ['angry', 'happy', 'sad', 'surprised', 'normal'];
+
     // Create entities with supplied mixin.
 
     for (var i = 0; i < data.num; i++) {
@@ -112004,7 +112008,7 @@ AFRAME.registerComponent('generate-asteroids', {
           random = Math.floor(Math.random() * colors.length);
 
       entity.setAttribute('mixin', data.mixin);
-      entity.setAttribute('class', 'asteroid');
+      entity.setAttribute('class', emotionMap[random] + '-asteroid');
       entity.setAttribute('material', 'color', '' + colors[random]);
       this.el.appendChild(entity);
       console.log(entity);
@@ -112019,14 +112023,6 @@ AFRAME.registerComponent('generate-asteroids', {
   }
 });
 
-// const colorsMap = {
-//   'red' : "#872720",
-//   'green' : "#284905", 
-//   'blue' : "#293963", 
-//   'yellow' : "#60660c", 
-//   'brown' : "#514734"
-// }
-
 /***/ }),
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -112036,17 +112032,19 @@ AFRAME.registerComponent('generate-asteroids', {
 
 AFRAME.registerComponent("projectile", {
   schema: {
-    speed: { default: -0.4 },
+    speed: { default: -0.15 },
     target: { default: "" }
   },
 
   init: function init() {
-    var enemies = document.querySelectorAll(".asteroid");
+    var enemies = document.querySelectorAll("[class^='" + this.data.target + "'],[class^='normal']");
+    console.log('current state of target', this.data.target, enemies);
     this.targets = [];
-    //this.ticks = 0;
+
     for (var i = 0; i < enemies.length; i++) {
       this.targets.push(enemies[i]);
     }
+    //console.log('LE TARGS', enemies)
   },
 
   tick: function tick() {

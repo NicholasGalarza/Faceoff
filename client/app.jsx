@@ -19,7 +19,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* hi foo*/}
         <ClmTrackr setBulletAttribute={this.setBulletAttribute} />
         <Scene>
           <a-assets>
@@ -40,19 +39,18 @@ class App extends Component {
               geometry="primitive: cylinder; height: 2; radius: 0.5"
               material="color: red; metalness: 0.2; opacity: 0.4; roughness: 0.3; side: double"
               rotation="90 0 0"
-              projectile="speed: -0.15; target: .asteroid">
+              projectile={`speed: -0.15; target: ${this.state.bulletAttribute}`}>
             </a-mixin>
           </a-assets>
-
+          {/* Buisness logic */}
           <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
           {/* <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky> */}
           <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
-          {/* <a-entity generate-asteroids="mixin: asteroid-features position; num: 10;"></a-entity> */}
+
           <Entity generate-asteroids={{ mixin: "asteroid-features position", num: 15 }} />
-          {/* <a-entity geometry="primitive: box" material="color: red"></a-entity> */}
-          <Entity geometry={{ primitive: 'box', width: 5 }} position="0 0 -5" />
+
           <a-camera face-watcher="empty: true"
-            spawner="mixin: laser">
+            spawner="mixin: laser; on: keyup">
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>

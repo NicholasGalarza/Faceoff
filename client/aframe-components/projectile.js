@@ -1,16 +1,18 @@
 AFRAME.registerComponent("projectile", {
   schema: {
-    speed: { default: -0.4 },
+    speed: { default: -0.15 },
     target: { default: "" }
   },
 
-  init: function () {
-    let enemies = document.querySelectorAll(".asteroid");
+  init: function () { 
+    let enemies = document.querySelectorAll(`[class^='${this.data.target}'],[class^='normal']`);
+    console.log('current state of target', this.data.target, enemies)
     this.targets = [];
-    //this.ticks = 0;
+    
     for (let i = 0; i < enemies.length; i++) {
       this.targets.push(enemies[i]);
     }
+    //console.log('LE TARGS', enemies)
   },
 
   tick: function () {
@@ -30,7 +32,7 @@ AFRAME.registerComponent("projectile", {
     };
 
     let bullet = this.el;
-
+    
     if (bullet.object3D.position.length() > 100 && bullet.parentEl)
       bullet.parentNode.removeChild(bullet);
     else if (this.targets.length !== 0 && bullet.parentEl) {
