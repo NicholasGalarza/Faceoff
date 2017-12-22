@@ -34,9 +34,13 @@ here is the general schema for what you can destroy:
 
 ### TODO
 1. [x] Make entities render by using component (a possible alternative would be to use React's ability to create functions inside of {} )
-2. [ ] Incorporate `physics system` to fire projectiles
-3. [ ] Attatch `clmtrackr's` emotion attribute to each projectile
-4. [ ] Add event listeners on asteroids to destroy if attributed bullet collides with object
+2. [x] Incorporate `physics system` to fire projectiles
+3. [x] Attatch `clmtrackr's` emotion attribute to each projectile
+4. [x] Add event listeners on asteroids to destroy if attributed bullet collides with object
+5. [ ] Add textures to spheres and make vr-space more ambient
+6. [ ] Bug: performance issue with projectile tracking for empty target list and general slowdown
+7. [ ] Add color to bullet for correlating emotion.
+
 
 
 
