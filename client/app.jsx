@@ -19,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* hi foo*/}
         <ClmTrackr setBulletAttribute={this.setBulletAttribute} />
         <Scene>
           <a-assets>
