@@ -50,7 +50,7 @@ AFRAME.registerComponent("projectile", {
 
         let sphere = bullet.object3D.translateY(this.data.speed).position,
           target = this.targets[i],
-          targetName = target.object3D.el.className.slice(0, -9)
+          targetName = (target.object3D.el) ? target.object3D.el.className.slice(0, -9) : 'DNE'
 
         if (intersect(sphere, box) && target.parentNode &&
           (this.data.target === targetName || 'normal' === targetName)) {

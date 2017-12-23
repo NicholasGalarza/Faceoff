@@ -50,7 +50,7 @@ class App extends Component {
           <Entity generate-asteroids={{ mixin: "asteroid-features position", num: 15 }} />
 
           <a-camera face-watcher="empty: true"
-            spawner="mixin: laser; on: keyup">
+            spawner={`mixin: laser; on: keyup; emote: ${this.state.bulletAttribute}`}>
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>

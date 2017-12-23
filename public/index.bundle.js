@@ -112076,7 +112076,7 @@ AFRAME.registerComponent("projectile", {
 
         var sphere = bullet.object3D.translateY(this.data.speed).position,
             target = this.targets[i],
-            targetName = target.object3D.el.className.slice(0, -9);
+            targetName = target.object3D.el ? target.object3D.el.className.slice(0, -9) : 'DNE';
 
         if (intersect(sphere, box) && target.parentNode && (this.data.target === targetName || 'normal' === targetName)) {
           target.parentNode.removeChild(target);
@@ -112101,7 +112101,8 @@ AFRAME.registerComponent("projectile", {
 AFRAME.registerComponent("spawner", {
   schema: {
     on: { default: "click" },
-    mixin: { default: "" }
+    mixin: { default: "" },
+    emote: { default: "" }
   },
 
   /**
@@ -112121,10 +112122,18 @@ AFRAME.registerComponent("spawner", {
     var matrixWorld = el.object3D.matrixWorld;
     var position = new THREE.Vector3();
     var rotation = this.el.getAttribute("rotation");
+    var emotionMap = {
+      'angry': '#872720',
+      'happy': '#284905',
+      'sad': '#293963',
+      'surprised': '#60660c',
+      'normal': '#514734'
+    };
 
     position.setFromMatrixPosition(matrixWorld);
     entity.setAttribute("position", position);
     entity.setAttribute("mixin", this.data.mixin);
+    entity.setAttribute('material', 'color', "" + emotionMap[this.data.emote]);
     entity.addEventListener("loaded", function () {
       entityRotation = entity.getAttribute("rotation");
       entity.setAttribute("rotation", {
