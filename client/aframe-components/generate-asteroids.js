@@ -11,7 +11,6 @@ AFRAME.registerComponent('generate-asteroids', {
       emotionMap = ['angry', 'happy', 'sad', 'surprised', 'normal']
    
     // Create entities with supplied mixin.
-
     for (let i = 0; i < data.num; i++) {
       let entity = document.createElement('a-entity'),
         random = Math.floor(Math.random() * colors.length)
@@ -20,7 +19,6 @@ AFRAME.registerComponent('generate-asteroids', {
       entity.setAttribute('class', `${emotionMap[random]}-asteroid`)
       entity.setAttribute('material', 'color', `${colors[random]}`)
       this.el.appendChild(entity);
-      console.log(entity)
     }
   },
   tick: function () {

@@ -1,18 +1,17 @@
 AFRAME.registerComponent("projectile", {
   schema: {
     speed: { default: -0.15 },
-    target: { default: "" }
+    target: { default: "" },
+    destroy: { default: "" }
   },
 
-  init: function () { 
-    let enemies = document.querySelectorAll(`[class^='${this.data.target}'],[class^='normal']`);
-    console.log('current state of target', this.data.target, enemies)
-    this.targets = [];
-    
+  init: function () {
+    let enemies = document.querySelectorAll(`[class$='${this.data.destroy}']`)
+    this.targets = []
+
     for (let i = 0; i < enemies.length; i++) {
-      this.targets.push(enemies[i]);
+      this.targets.push(enemies[i])
     }
-    //console.log('LE TARGS', enemies)
   },
 
   tick: function () {
@@ -28,16 +27,18 @@ AFRAME.registerComponent("projectile", {
         (y - sphere.y) * (y - sphere.y) +
         (z - sphere.z) * (z - sphere.z)
       );
+      //console.log(distance)
       return distance < 0.25;
     };
 
-    let bullet = this.el;
-    
-    if (bullet.object3D.position.length() > 100 && bullet.parentEl)
-      bullet.parentNode.removeChild(bullet);
-    else if (this.targets.length !== 0 && bullet.parentEl) {
+    let bullet = this.el
+
+    if (bullet.object3D.position.length() > 100 && bullet.parentEl) {
+      bullet.parentNode.removeChild(bullet)
+    } else if (this.targets.length !== 0 && bullet.parentEl) {
       for (let i = 0; i < this.targets.length; i++) {
-        let currentEnemy = this.targets[i].object3D;
+        let currentEnemy = this.targets[i].object3D
+
         let box = {
           minX: currentEnemy.position.x - 2,
           minY: currentEnemy.position.y - 2,
@@ -45,18 +46,22 @@ AFRAME.registerComponent("projectile", {
           maxX: currentEnemy.position.x + 2,
           maxY: currentEnemy.position.y + 2,
           maxZ: currentEnemy.position.z + 2
-        };
-        let sphere = bullet.object3D.translateY(this.data.speed).position,
-          target = this.targets[i];
+        }
 
-        if (intersect(sphere, box) && target.parentNode) {
-          target.parentNode.removeChild(target);
-          bullet.parentNode.removeChild(bullet);
-          this.targets.splice(i, 1);
-          return;
+        let sphere = bullet.object3D.translateY(this.data.speed).position,
+          target = this.targets[i],
+          targetName = target.object3D.el.className.slice(0, -9)
+
+        if (intersect(sphere, box) && target.parentNode &&
+          (this.data.target === targetName || 'normal' === targetName)) {
+          target.parentNode.removeChild(target)
+          bullet.parentNode.removeChild(bullet)
+          this.targets.splice(i, 1)
+          return
         }
       }
+    } else {
+      bullet.object3D.translateY(this.data.speed)
     }
-    bullet.object3D.translateY(this.data.speed);
   }
 });

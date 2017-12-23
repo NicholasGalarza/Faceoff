@@ -112002,7 +112002,6 @@ AFRAME.registerComponent('generate-asteroids', {
     emotionMap = ['angry', 'happy', 'sad', 'surprised', 'normal'];
 
     // Create entities with supplied mixin.
-
     for (var i = 0; i < data.num; i++) {
       var entity = document.createElement('a-entity'),
           random = Math.floor(Math.random() * colors.length);
@@ -112011,7 +112010,6 @@ AFRAME.registerComponent('generate-asteroids', {
       entity.setAttribute('class', emotionMap[random] + '-asteroid');
       entity.setAttribute('material', 'color', '' + colors[random]);
       this.el.appendChild(entity);
-      console.log(entity);
     }
   },
   tick: function tick() {
@@ -112033,18 +112031,17 @@ AFRAME.registerComponent('generate-asteroids', {
 AFRAME.registerComponent("projectile", {
   schema: {
     speed: { default: -0.15 },
-    target: { default: "" }
+    target: { default: "" },
+    destroy: { default: "" }
   },
 
   init: function init() {
-    var enemies = document.querySelectorAll("[class^='" + this.data.target + "'],[class^='normal']");
-    console.log('current state of target', this.data.target, enemies);
+    var enemies = document.querySelectorAll("[class$='" + this.data.destroy + "']");
     this.targets = [];
 
     for (var i = 0; i < enemies.length; i++) {
       this.targets.push(enemies[i]);
     }
-    //console.log('LE TARGS', enemies)
   },
 
   tick: function tick() {
@@ -112056,14 +112053,18 @@ AFRAME.registerComponent("projectile", {
 
       // this is the same as isPointInsideSphere
       var distance = Math.sqrt((x - sphere.x) * (x - sphere.x) + (y - sphere.y) * (y - sphere.y) + (z - sphere.z) * (z - sphere.z));
+      //console.log(distance)
       return distance < 0.25;
     };
 
     var bullet = this.el;
 
-    if (bullet.object3D.position.length() > 100 && bullet.parentEl) bullet.parentNode.removeChild(bullet);else if (this.targets.length !== 0 && bullet.parentEl) {
+    if (bullet.object3D.position.length() > 100 && bullet.parentEl) {
+      bullet.parentNode.removeChild(bullet);
+    } else if (this.targets.length !== 0 && bullet.parentEl) {
       for (var i = 0; i < this.targets.length; i++) {
         var currentEnemy = this.targets[i].object3D;
+
         var box = {
           minX: currentEnemy.position.x - 2,
           minY: currentEnemy.position.y - 2,
@@ -112072,18 +112073,21 @@ AFRAME.registerComponent("projectile", {
           maxY: currentEnemy.position.y + 2,
           maxZ: currentEnemy.position.z + 2
         };
-        var sphere = bullet.object3D.translateY(this.data.speed).position,
-            target = this.targets[i];
 
-        if (intersect(sphere, box) && target.parentNode) {
+        var sphere = bullet.object3D.translateY(this.data.speed).position,
+            target = this.targets[i],
+            targetName = target.object3D.el.className.slice(0, -9);
+
+        if (intersect(sphere, box) && target.parentNode && (this.data.target === targetName || 'normal' === targetName)) {
           target.parentNode.removeChild(target);
           bullet.parentNode.removeChild(bullet);
           this.targets.splice(i, 1);
           return;
         }
       }
+    } else {
+      bullet.object3D.translateY(this.data.speed);
     }
-    bullet.object3D.translateY(this.data.speed);
   }
 });
 
