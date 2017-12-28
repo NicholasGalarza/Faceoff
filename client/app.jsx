@@ -43,16 +43,18 @@ class App extends Component {
             </a-mixin>
           </a-assets>
           {/* Buisness logic */}
-          <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+          <a-plane position="0 0 0" src="#groundTexture" rotation="-90 0 0" width="128" height="128" static-body></a-plane>
           {/* <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky> */}
-          <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
 
           <Entity generate-asteroids={{ mixin: "asteroid-features position", num: 15 }} />
 
           <a-camera
             face-watcher="empty: true"
             universal-controls="enabled: true"
-            spawner={`mixin: laser; on: keyup; emote: ${this.state.bulletAttribute}`}>
+            spawner={`mixin: laser; on: keyup; emote: ${this.state.bulletAttribute}`}
+            jump-ability="maxJumps: 10; distance: 10;"
+            kinematic-body="mass: 5"
+          >
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>

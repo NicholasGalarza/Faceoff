@@ -19,17 +19,13 @@ AFRAME.registerComponent('boundary', {
 	},
 
 	tick: function () {
-		let data = this.data;
-		let thiswidth = data.width;
-		let thisdepth = data.depth;
-		let x0 = data.x0;
-		let z0 = data.z0;
-   
-		this.minX = thiswidth / 2 + x0;
-		this.maxX = (-1 * thiswidth / 2) + x0;
+		let { width, depth, x0, z0 } = this.data
 
-		this.minZ = thisdepth / 2 + z0;
-		this.maxZ = (-1 * thisdepth / 2) + z0;
+		var minX = width / 2 + x0;
+		var maxX = (-1 * width / 2) + x0;
+
+		var minZ = depth / 2 + z0;
+		var maxZ = (-1 * depth / 2) + z0;
 
 		let position = this.el.getAttribute('position');
 

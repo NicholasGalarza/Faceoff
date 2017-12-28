@@ -1,58 +1,5 @@
 webpackJsonp([1],{
 
-/***/ 217:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-AFRAME.registerComponent('boundary', {
-	schema: {
-		width: {
-			type: 'number',
-			default: 10
-		},
-		depth: {
-			type: 'number',
-			default: 10
-		},
-		x0: {
-			type: 'number',
-			default: 0
-		},
-		z0: {
-			type: 'number',
-			default: 0
-		}
-	},
-
-	tick: function tick() {
-		var data = this.data;
-		var thiswidth = data.width;
-		var thisdepth = data.depth;
-		var x0 = data.x0;
-		var z0 = data.z0;
-
-		this.minX = thiswidth / 2 + x0;
-		this.maxX = -1 * thiswidth / 2 + x0;
-
-		this.minZ = thisdepth / 2 + z0;
-		this.maxZ = -1 * thisdepth / 2 + z0;
-
-		var position = this.el.getAttribute('position');
-
-		position.x = Math.min(this.minX, position.x);
-		position.x = Math.max(this.maxX, position.x);
-
-		position.z = Math.min(this.minZ, position.z);
-		position.z = Math.max(this.maxZ, position.z);
-
-		this.el.setAttribute('position', position);
-	}
-});
-
-/***/ }),
-
 /***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68,7 +15,7 @@ __webpack_require__(90);
 
 __webpack_require__(91);
 
-__webpack_require__(217);
+__webpack_require__(92);
 
 __webpack_require__(93);
 
@@ -79717,6 +79664,60 @@ AFRAME.registerComponent('face-watcher', {
       }
     });
   }
+});
+
+/***/ }),
+
+/***/ 92:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+AFRAME.registerComponent('boundary', {
+	schema: {
+		width: {
+			type: 'number',
+			default: 10
+		},
+		depth: {
+			type: 'number',
+			default: 10
+		},
+		x0: {
+			type: 'number',
+			default: 0
+		},
+		z0: {
+			type: 'number',
+			default: 0
+		}
+	},
+
+	tick: function tick() {
+		var _data = this.data,
+		    width = _data.width,
+		    depth = _data.depth,
+		    x0 = _data.x0,
+		    z0 = _data.z0;
+
+
+		var minX = width / 2 + x0;
+		var maxX = -1 * width / 2 + x0;
+
+		var minZ = depth / 2 + z0;
+		var maxZ = -1 * depth / 2 + z0;
+
+		var position = this.el.getAttribute('position');
+
+		position.x = Math.min(this.minX, position.x);
+		position.x = Math.max(this.maxX, position.x);
+
+		position.z = Math.min(this.minZ, position.z);
+		position.z = Math.max(this.maxZ, position.z);
+
+		this.el.setAttribute('position', position);
+	}
 });
 
 /***/ }),
