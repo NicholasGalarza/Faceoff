@@ -52,8 +52,9 @@ class App extends Component {
             face-watcher="empty: true"
             universal-controls="enabled: true"
             spawner={`mixin: laser; on: keyup; emote: ${this.state.bulletAttribute}`}
-            jump-ability="maxJumps: 10; distance: 10;"
+            jump-ability="maxJumps: 1; distance: 15;"
             kinematic-body="mass: 5"
+            boundary="width: 125; depth: 125"
           >
             <a-cursor></a-cursor>
           </a-camera>
