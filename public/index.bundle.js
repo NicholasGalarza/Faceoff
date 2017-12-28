@@ -1,31 +1,31 @@
 webpackJsonp([1],{
 
-/***/ 86:
+/***/ 132:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /* All aframe related dependencies & aframe components */
 
-__webpack_require__(87);
+__webpack_require__(133);
 
-__webpack_require__(89);
+__webpack_require__(135);
 
-__webpack_require__(90);
+__webpack_require__(136);
 
-__webpack_require__(91);
+__webpack_require__(137);
 
-__webpack_require__(92);
+__webpack_require__(138);
 
-__webpack_require__(93);
+__webpack_require__(139);
 
-__webpack_require__(94);
+__webpack_require__(140);
 
-__webpack_require__(95);
+__webpack_require__(141);
 
 /***/ }),
 
-/***/ 87:
+/***/ 133:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {var require;var require;(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.AFRAME = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
@@ -79488,11 +79488,11 @@ module.exports = getWakeLock();
 });
 //# sourceMappingURL=aframe-master.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25), __webpack_require__(52).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40), __webpack_require__(79).setImmediate))
 
 /***/ }),
 
-/***/ 89:
+/***/ 135:
 /***/ (function(module, exports) {
 
 if (typeof AFRAME === 'undefined') {
@@ -79612,7 +79612,7 @@ AFRAME.registerComponent('random-scale', {
 
 /***/ }),
 
-/***/ 90:
+/***/ 136:
 /***/ (function(module, exports) {
 
 if (typeof AFRAME === 'undefined') {
@@ -79644,7 +79644,7 @@ AFRAME.registerComponent('entity-generator', {
 
 /***/ }),
 
-/***/ 91:
+/***/ 137:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79668,7 +79668,7 @@ AFRAME.registerComponent('face-watcher', {
 
 /***/ }),
 
-/***/ 92:
+/***/ 138:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79711,7 +79711,7 @@ AFRAME.registerComponent('boundary', {
 
 /***/ }),
 
-/***/ 93:
+/***/ 139:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79752,7 +79752,7 @@ AFRAME.registerComponent('generate-asteroids', {
 
 /***/ }),
 
-/***/ 94:
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79823,7 +79823,7 @@ AFRAME.registerComponent("projectile", {
 
 /***/ }),
 
-/***/ 95:
+/***/ 141:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79881,5 +79881,5 @@ AFRAME.registerComponent("spawner", {
 
 /***/ })
 
-},[86]);
+},[132]);
 //# sourceMappingURL=index.bundle.js.map
