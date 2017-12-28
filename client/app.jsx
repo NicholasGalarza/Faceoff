@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <ClmTrackr setBulletAttribute={this.setBulletAttribute} />
-        <Scene>
+        <Scene physics>
           <a-assets>
             {/* Images & Textures */}
             <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
@@ -49,11 +49,15 @@ class App extends Component {
 
           <Entity generate-asteroids={{ mixin: "asteroid-features position", num: 15 }} />
 
-          <a-camera face-watcher="empty: true"
+          <a-camera
+            face-watcher="empty: true"
+            universal-controls="enabled: true"
             spawner={`mixin: laser; on: keyup; emote: ${this.state.bulletAttribute}`}>
             <a-cursor></a-cursor>
           </a-camera>
         </Scene>
+        {/* jump-ability="maxJumps: 10; distance: 10;"
+            kinematic-body="mass: 5" */}
       </div>
     )
   }
