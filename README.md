@@ -38,7 +38,7 @@ here is the general schema for what you can destroy:
 4. [x] Tracking on projectiles to destroy if attributed bullet crosses verticies with asteroid object.
 5. [ ] Textures to spheres and make vr-space more ambient
 6. [x] Color to bullet for correlating emotion.
-7. [ ] Add physics to allow player to jump and not fall through the world
+7. [x] Add physics to allow player to jump and not fall through the world
 8. [ ] Deploy! 
 
 ### BUGS
