@@ -16,12 +16,13 @@ AFRAME.registerComponent("spawner", {
    * Spawn new entity at entity's current position.
    */
   spawn: function () {
-    let el = this.el
-    let entity = document.createElement("a-entity")
-    let entityRotation
-    let matrixWorld = el.object3D.matrixWorld
-    let position = new THREE.Vector3()
-    let rotation = this.el.getAttribute("rotation")
+    let el = this.el,
+      entity = document.createElement("a-entity"),
+      entityRotation,
+      matrixWorld = el.object3D.matrixWorld,
+      position = new THREE.Vector3(),
+      rotation = this.el.getAttribute("rotation")
+      
     const emotionMap = {
       'angry': '#872720',
       'happy': '#284905',

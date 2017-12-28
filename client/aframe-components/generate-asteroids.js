@@ -9,7 +9,7 @@ AFRAME.registerComponent('generate-asteroids', {
     const colors = ['#872720', '#284905', '#293963', '#60660c', '#514734'],
       //colorTone = ['red', 'green', 'blue', 'yellow', 'brown']
       emotionMap = ['angry', 'happy', 'sad', 'surprised', 'normal']
-   
+
     // Create entities with supplied mixin.
     for (let i = 0; i < data.num; i++) {
       let entity = document.createElement('a-entity'),
@@ -22,9 +22,9 @@ AFRAME.registerComponent('generate-asteroids', {
     }
   },
   tick: function () {
-    let enemies = document.querySelectorAll('.asteroid');
+    let asteroids = document.querySelectorAll('.asteroid');
 
-    if (enemies.length === 1) {
+    if (asteroids.length === 1) {
       this.init()
     }
   }

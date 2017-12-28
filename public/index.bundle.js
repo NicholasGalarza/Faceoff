@@ -79675,49 +79675,38 @@ AFRAME.registerComponent('face-watcher', {
 
 
 AFRAME.registerComponent('boundary', {
-	schema: {
-		width: {
-			type: 'number',
-			default: 10
-		},
-		depth: {
-			type: 'number',
-			default: 10
-		},
-		x0: {
-			type: 'number',
-			default: 0
-		},
-		z0: {
-			type: 'number',
-			default: 0
-		}
-	},
+  schema: {
+    width: {
+      type: 'number',
+      default: 10
+    },
+    depth: {
+      type: 'number',
+      default: 10
+    }
+  },
 
-	tick: function tick() {
-		var _data = this.data,
-		    width = _data.width,
-		    depth = _data.depth,
-		    x0 = _data.x0,
-		    z0 = _data.z0;
+  tick: function tick() {
+    var _data = this.data,
+        width = _data.width,
+        depth = _data.depth;
 
 
-		var minX = width / 2 + x0;
-		var maxX = -1 * width / 2 + x0;
+    var minX = width / 2,
+        maxX = -1 * width / 2,
+        minZ = depth / 2,
+        maxZ = -1 * depth / 2;
 
-		var minZ = depth / 2 + z0;
-		var maxZ = -1 * depth / 2 + z0;
+    var position = this.el.getAttribute('position');
 
-		var position = this.el.getAttribute('position');
+    position.x = Math.min(minX, position.x);
+    position.x = Math.max(maxX, position.x);
 
-		position.x = Math.min(minX, position.x);
-		position.x = Math.max(maxX, position.x);
+    position.z = Math.min(minZ, position.z);
+    position.z = Math.max(maxZ, position.z);
 
-		position.z = Math.min(minZ, position.z);
-		position.z = Math.max(maxZ, position.z);
-
-		this.el.setAttribute('position', position);
-	}
+    this.el.setAttribute('position', position);
+  }
 });
 
 /***/ }),
@@ -79753,9 +79742,9 @@ AFRAME.registerComponent('generate-asteroids', {
     }
   },
   tick: function tick() {
-    var enemies = document.querySelectorAll('.asteroid');
+    var asteroids = document.querySelectorAll('.asteroid');
 
-    if (enemies.length === 1) {
+    if (asteroids.length === 1) {
       this.init();
     }
   }
@@ -79858,12 +79847,13 @@ AFRAME.registerComponent("spawner", {
    * Spawn new entity at entity's current position.
    */
   spawn: function spawn() {
-    var el = this.el;
-    var entity = document.createElement("a-entity");
-    var entityRotation = void 0;
-    var matrixWorld = el.object3D.matrixWorld;
-    var position = new THREE.Vector3();
-    var rotation = this.el.getAttribute("rotation");
+    var el = this.el,
+        entity = document.createElement("a-entity"),
+        entityRotation = void 0,
+        matrixWorld = el.object3D.matrixWorld,
+        position = new THREE.Vector3(),
+        rotation = this.el.getAttribute("rotation");
+
     var emotionMap = {
       'angry': '#872720',
       'happy': '#284905',

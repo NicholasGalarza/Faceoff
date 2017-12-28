@@ -1,40 +1,31 @@
 AFRAME.registerComponent('boundary', {
-	schema: {
-		width: {
-			type: 'number',
-			default: 10
-		},
-		depth: {
-			type: 'number',
-			default: 10
-		},
-		x0: {
-			type: 'number',
-			default: 0
-		},
-		z0: {
-			type: 'number',
-			default: 0
-		}
-	},
+  schema: {
+    width: {
+      type: 'number',
+      default: 10
+    },
+    depth: {
+      type: 'number',
+      default: 10
+    }
+  },
 
-	tick: function () {
-		let { width, depth, x0, z0 } = this.data
+  tick: function () {
+    const { width, depth } = this.data
 
-		var minX = width / 2 + x0;
-		var maxX = (-1 * width / 2) + x0;
+    var minX = (width / 2),
+      maxX = (-1 * width / 2),
+      minZ = (depth / 2),
+      maxZ = (-1 * depth / 2)
 
-		var minZ = depth / 2 + z0;
-		var maxZ = (-1 * depth / 2) + z0;
+    let position = this.el.getAttribute('position');
 
-		let position = this.el.getAttribute('position');
+    position.x = Math.min(minX, position.x);
+    position.x = Math.max(maxX, position.x);
 
-		position.x = Math.min(minX, position.x);
-		position.x = Math.max(maxX, position.x);
+    position.z = Math.min(minZ, position.z);
+    position.z = Math.max(maxZ, position.z);
 
-		position.z = Math.min(minZ, position.z);
-		position.z = Math.max(maxZ, position.z);
-
-		this.el.setAttribute('position', position);
-	},
+    this.el.setAttribute('position', position);
+  },
 });
