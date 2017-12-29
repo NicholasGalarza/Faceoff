@@ -79744,7 +79744,7 @@ AFRAME.registerComponent('generate-asteroids', {
   },
 
   tick: function tick() {
-    var asteroids = document.querySelectorAll('.asteroid');
+    var asteroids = document.querySelectorAll('[class$=asteroid]');
 
     if (asteroids.length === 1) {
       this.init();
