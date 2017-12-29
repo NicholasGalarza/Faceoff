@@ -1,4 +1,9 @@
-node_modules/
-public/
+node_modules
+public/app.bundle.js
+public/app.bundle.js.map
+public/commons.js
+public/commons.js.map
+public/index.bundle.js
+public/index.js.map
 .DS_Store
 .cache
