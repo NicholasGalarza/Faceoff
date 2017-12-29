@@ -79678,11 +79678,11 @@ AFRAME.registerComponent('boundary', {
   schema: {
     width: {
       type: 'number',
-      default: 10
+      default: 50
     },
     depth: {
       type: 'number',
-      default: 10
+      default: 50
     }
   },
 
