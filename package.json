@@ -1,7 +1,7 @@
 {
   "name": "vr-game",
   "version": "1.0.0",
-  "description": "A VR Game that will allow a user to destory objects by giving an appropriate facial expression",
+  "description": "A VR/3D Game that will allow a user to destory asteroids by giving an appropriate facial expression",
   "main": "webpack.config.js",
   "scripts": {
     "build-client": "webpack",
