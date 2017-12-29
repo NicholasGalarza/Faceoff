@@ -21,6 +21,7 @@ AFRAME.registerComponent('generate-asteroids', {
       this.el.appendChild(entity);
     }
   },
+  
   tick: function () {
     let asteroids = document.querySelectorAll('.asteroid');
 

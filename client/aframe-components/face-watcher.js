@@ -2,6 +2,7 @@ AFRAME.registerComponent('face-watcher', {
   schema: {
     empty: { default: true }
   },
+  
   init: function () {
     let el = this.el;
     window.addEventListener('keyup', function (event) {

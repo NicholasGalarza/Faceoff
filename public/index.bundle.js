@@ -79654,6 +79654,7 @@ AFRAME.registerComponent('face-watcher', {
   schema: {
     empty: { default: true }
   },
+
   init: function init() {
     var el = this.el;
     window.addEventListener('keyup', function (event) {
@@ -79741,6 +79742,7 @@ AFRAME.registerComponent('generate-asteroids', {
       this.el.appendChild(entity);
     }
   },
+
   tick: function tick() {
     var asteroids = document.querySelectorAll('.asteroid');
 
