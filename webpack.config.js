@@ -32,7 +32,7 @@ const config = {
         }
       }
     ]
-  }, 
+  },
   plugins: [
     extractCommons
   ]
