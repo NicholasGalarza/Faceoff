@@ -5,7 +5,7 @@ const app = express();
 
 const production = process.env.NODE_ENV === 'production';
 const port = production ? process.env.PORT : 8080;
-
+console.log('my port', port)
 var publicPath = path.resolve(__dirname, '../public');
 
 app.use(express.static(publicPath));
