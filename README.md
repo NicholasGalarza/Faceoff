@@ -5,7 +5,7 @@ Documentation for a-frame: https://aframe.io/docs/0.7.0/introduction/
 Documentation for clm-tracker: https://www.auduno.com/clmtrackr/docs/reference.html
 
 ## Current Deployment (Heroku)
-[https://faceoffvr.herokuapp.com/]
+https://faceoffvr.herokuapp.com/
 
 *Depending on when the page was last accessed, initially opening the page may take 5-30 seconds because webpack must bundle the client-side code together. Heroku shuts off the site if it wasn't in use for the past 30 minutes so you may experience this wait. Additionally, the page will ask to use your onboard camera for emotion detection so no surprises!*
 

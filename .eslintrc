@@ -1,10 +1,10 @@
 {
-    "extends": "fullstack",
-    "parser": "babel-eslint",
-    "rules": {
-        "camelcase": [
-            0
-        ],
-        "strict": 0
-    }
+  "extends": "fullstack",
+  "parser": "babel-eslint",
+  "rules": {
+    "camelcase": [
+      0
+    ],
+    "strict": 0
+  }
 }
