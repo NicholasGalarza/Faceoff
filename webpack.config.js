@@ -2,11 +2,6 @@
 const webpack = require('webpack')
 const path = require('path')
 
-// var PLUGINS = [];
-// if (process.env.NODE_ENV === 'production') {
-//   PLUGINS.push(new webpack.optimize.UglifyJsPlugin());
-// }
-
 const extractCommons = new webpack.optimize.CommonsChunkPlugin({
   name: 'commons',
   filename: 'commons.js'
