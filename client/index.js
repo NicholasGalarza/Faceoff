@@ -8,5 +8,5 @@ import './aframe-components/boundary.js'
 import './aframe-components/generate-asteroids.js'
 import './aframe-components/projectile.js'
 import './aframe-components/spawner.js'
-// import 'aframe-extras'
-// import 'aframe-physics-system'
+//import 'aframe-extras'
+

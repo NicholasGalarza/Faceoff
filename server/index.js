@@ -3,8 +3,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const isProduction = process.env.NODE_ENV === 'production';
-const port = isProduction ? process.env.PORT : 8080;
+const production = process.env.NODE_ENV === 'production';
+const port = production ? process.env.PORT : 8080;
 
 var publicPath = path.resolve(__dirname, '../public');
 

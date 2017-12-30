@@ -28,8 +28,7 @@
   "dependencies": {
     "aframe": "^0.5.0",
     "aframe-entity-generator-component": "^3.0.1",
-    "aframe-extras": "^3.12.4",
-    "aframe-physics-system": "^2.1.0",
+    "aframe-extras": "^3.13.1",
     "aframe-randomizer-components": "^3.0.2",
     "aframe-react": "^4.3.0",
     "babel-core": "^6.26.0",
