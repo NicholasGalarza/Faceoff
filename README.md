@@ -9,15 +9,15 @@ https://faceoffvr.herokuapp.com/
 
 *Depending on when the page was last accessed, initially opening the page may take 5-30 seconds because webpack must bundle the client-side code together. Heroku shuts off the site if it wasn't in use for the past 30 minutes so you may experience this wait. Additionally, the page will ask to use your onboard camera for emotion detection so no surprises!*
 
-## Installation
+## Installation (Local)
 Fork this project to your local computer, and you must do: 
 1. `npm install`
-2. `npm run start`
+2. `npm run build-client && npm run start`
 3. Go on over to `localhost:8080`
 
-## Development
-1. `npm run build-watch`
-2. `npm run start`
+## Development (Local)
+1. `npm run build-client-watch`
+2. `npm run start-dev`
 3. Go on over to `localhost:8080`
 * Note, you must have `build-watch` and `start` running at the same time
 
