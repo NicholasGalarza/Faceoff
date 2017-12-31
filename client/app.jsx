@@ -23,7 +23,7 @@ class App extends Component {
         <Scene physics>
           <a-assets>
             {/* Images & Textures */}
-            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossOrigin="anonymous"/>
+            <img id="groundTexture" src="/images/floor.jpg" crossOrigin="anonymous"/>
             <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossOrigin="anonymous"/>
 
             {/* All mixin properties */}
