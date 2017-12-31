@@ -6,12 +6,8 @@ AFRAME.registerComponent("projectile", {
   },
 
   init: function () {
-    let enemies = document.querySelectorAll(`[class$='${this.data.destroy}']`)
-    this.targets = []
-
-    for (let i = 0; i < enemies.length; i++) {
-      this.targets.push(enemies[i])
-    }
+    let asteroids = document.querySelectorAll(`[class$='${this.data.destroy}']`)
+    this.targets = Array.prototype.slice.call(asteroids) // NodeList -> Array
   },
 
   tick: function () {

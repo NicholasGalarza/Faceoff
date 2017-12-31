@@ -23,7 +23,7 @@ Fork this project to your local computer, and you must do:
 
 ### How to play
 This game will track your facial expressions to determine what attribute to attach to each bullet. 
-A bullet is fired after releasing the 'e' key. To begin tracking your face, you must hold down 'e'
+A bullet is fired after releasing the `'e'` key. To begin tracking your face, you must hold down 'e'
 and must create an expression to destory an asteroid. Colors are matched to each particular asteroid, 
 here is the general schema for what you can destroy: 
 
@@ -34,6 +34,14 @@ here is the general schema for what you can destroy:
 |  *blue*  |  sad   | 
 |  *yellow* | suprised |
 |  *brown* |   any  |
+
+**Controls**
+
+Use your `mouse/mousepad` to look around
+`WASD` to move around
+`spacebar` to jump
+Holddown `e` key to track your face
+Release `e` key to fire projectile
 
 ### TODO
 1. [x] Make entities render by using random component generator

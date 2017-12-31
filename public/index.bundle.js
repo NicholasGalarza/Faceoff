@@ -79768,12 +79768,8 @@ AFRAME.registerComponent("projectile", {
   },
 
   init: function init() {
-    var enemies = document.querySelectorAll("[class$='" + this.data.destroy + "']");
-    this.targets = [];
-
-    for (var i = 0; i < enemies.length; i++) {
-      this.targets.push(enemies[i]);
-    }
+    var asteroids = document.querySelectorAll("[class$='" + this.data.destroy + "']");
+    this.targets = Array.prototype.slice.call(asteroids); // NodeList -> Array
   },
 
   tick: function tick() {
