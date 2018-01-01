@@ -32,15 +32,19 @@ here is the general schema for what you can destroy:
 |  *red*   | angry  | 
 |  *green* | happy  | 
 |  *blue*  |  sad   | 
-|  *yellow* | suprised |
+|  *yellow* | surprised |
 |  *brown* |   any  |
 
 **Controls**
 
 Use your `mouse/mousepad` to look around
+
 `WASD` to move around
+
 `spacebar` to jump
+
 Holddown `e` key to track your face
+
 Release `e` key to fire projectile
 
 ### TODO
